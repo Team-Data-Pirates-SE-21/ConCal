@@ -25,11 +25,18 @@
             android:id="@+id/appName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="monospace"
             android:text="@string/t_t_concal"
             android:textColor="#023047"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-black"
-            android:textSize="40sp"/>
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="     All options in a one place" />
 
         <TextView
             android:id="@+id/spaceBar2"
@@ -78,6 +85,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/concrete_strength_ncalculator"
+                        android:fontFamily="sans-serif-black"
                         android:textStyle="bold"
                         android:textAlignment="center"/>
                 </LinearLayout>
@@ -117,6 +125,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/brick_calculator"
                         android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
                         android:textAlignment="center"/>
                 </LinearLayout>
 
@@ -155,6 +164,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/ac_size_calculator"
                         android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
                         android:textAlignment="center"/>
                 </LinearLayout>
 
@@ -193,6 +203,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/wood_frame_ncalculator"
                         android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
                         android:textAlignment="center"/>
                 </LinearLayout>
 
@@ -232,6 +243,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/flooring_calculator"
                         android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
                         android:textAlignment="center"/>
                 </LinearLayout>
 
@@ -268,6 +280,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/staicase_mixture_ncalculator"
                         android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
                         android:textAlignment="center"/>
                 </LinearLayout>
 
@@ -304,6 +317,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/steel_weight_ncalculator"
                         android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
                         android:textAlignment="center"/>
                 </LinearLayout>
 
@@ -340,6 +354,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/anti_termite_ncalculator"
                         android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
                         android:textAlignment="center"/>
                 </LinearLayout>
 
@@ -380,7 +395,8 @@
                         android:layout_height="wrap_content"
                         android:text="Solar Rooftop\n\tcalculator"
                         android:textAlignment="center"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"/>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -419,6 +435,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/water_tank_capacity_n_tcalculator"
                         android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
                         android:textAlignment="center"/>
                 </LinearLayout>
 
