@@ -93,7 +93,7 @@
         app:layout_constraintHorizontal_bias="0.205"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.212"
+        app:layout_constraintVertical_bias="0.206"
         tools:ignore="HardcodedText" />
 
     <TextView
@@ -428,14 +428,14 @@
         android:id="@+id/imageView"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:contentDescription="height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.206"
+        app:layout_constraintVertical_bias="0.195"
         app:srcCompat="@drawable/height"
-        android:contentDescription="height"
         tools:ignore="HardcodedText" />
 
     <ImageView
@@ -452,19 +452,6 @@
         tools:ignore="ContentDescription" />
 
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.117"
-        app:srcCompat="@drawable/measuringtape"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
         android:id="@+id/imageView2"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -474,7 +461,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.1"
-        app:srcCompat="@drawable/measuringtape"
+        app:srcCompat="@drawable/length"
         tools:ignore="ContentDescription" />
 
     <ImageView
@@ -487,7 +474,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.602"
-        app:srcCompat="@drawable/measuringtape"
+        app:srcCompat="@drawable/length"
         tools:ignore="ContentDescription" />
 
     <ImageView
