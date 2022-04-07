@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:ignore="HardcodedText"
 
     app:guidelineUseRtl="false"
     tools:context=".MainActivity">
@@ -20,7 +21,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/txtAnswer2"
@@ -34,7 +36,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/btnPredict"
@@ -46,7 +49,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView9"
@@ -59,7 +63,8 @@
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,SpUsage" />
 
     <TextView
         android:id="@+id/textView19"
@@ -69,10 +74,11 @@
         android:layout_marginTop="632dp"
         android:fontFamily="sans-serif-black"
         android:text="28th Day Strength"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView8"
@@ -84,7 +90,8 @@
         android:text="Age"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/maxBlast"
@@ -151,7 +158,8 @@
         android:text="Superplasticizer"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/editTextInput8"
@@ -166,7 +174,9 @@
         android:text="0"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,LabelFor"
+        android:autofillHints="Age in days" />
 
     <EditText
         android:id="@+id/editTextInput3"
@@ -181,7 +191,9 @@
         android:text="0"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="Fly Ash"
+        tools:ignore="HardcodedText,LabelFor" />
 
     <TextView
         android:id="@+id/textView4"
@@ -193,7 +205,8 @@
         android:text="Water"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView"
@@ -205,7 +218,8 @@
         android:text="Cement"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView12"
@@ -216,7 +230,8 @@
         android:text="kg / m3"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView15"
@@ -227,7 +242,8 @@
         android:text="kg / m3"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView7"
@@ -238,7 +254,8 @@
         android:text="kg / m3"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/maxFineAggregate"
@@ -249,7 +266,8 @@
         android:background="@drawable/circlebackgroundbutton"
         android:text="+"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/editTextInput6"
@@ -265,7 +283,9 @@
         android:text="0"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,LabelFor"
+        android:autofillHints="Coarse Aggregate" />
 
     <TextView
         android:id="@+id/width"
@@ -276,7 +296,8 @@
         android:text="kg / m3"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/editTextInput"
@@ -291,7 +312,9 @@
         android:text="0"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,LabelFor"
+        android:autofillHints="Cement" />
 
     <EditText
         android:id="@+id/editTextInput5"
@@ -306,7 +329,9 @@
         android:text="0"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="Superplasticzer"
+        tools:ignore="HardcodedText,LabelFor" />
 
     <TextView
         android:id="@+id/textView13"
@@ -317,7 +342,8 @@
         android:text="kg / m3"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/minAge"
@@ -328,7 +354,8 @@
         android:background="@drawable/circlebackgroundbutton"
         android:text="-"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView16"
@@ -388,7 +415,9 @@
         android:text="0"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="Fine Aggregate"
+        tools:ignore="LabelFor" />
 
     <Button
         android:id="@+id/minBlast"
@@ -458,7 +487,8 @@
         android:text="0"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="Blast Furnace Slag" />
 
     <EditText
         android:id="@+id/editTextInput4"
@@ -473,7 +503,9 @@
         android:text="0"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="Water"
+        tools:ignore="LabelFor" />
 
     <Button
         android:id="@+id/maxSuper"
@@ -563,7 +595,8 @@
         android:layout_marginTop="96dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/water_icon" />
+        android:src="@drawable/water_icon"
+        android:contentDescription="cement" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -573,7 +606,8 @@
         android:layout_marginTop="160dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/water_icon" />
+        android:src="@drawable/water_icon"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -583,7 +617,8 @@
         android:layout_marginTop="212dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/water_icon" />
+        android:src="@drawable/water_icon"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -593,7 +628,8 @@
         android:layout_marginTop="272dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/water_icon" />
+        android:src="@drawable/water_icon"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -603,7 +639,8 @@
         android:layout_marginTop="340dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/water_icon" />
+        android:src="@drawable/water_icon"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -613,7 +650,8 @@
         android:layout_marginTop="408dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/water_icon" />
+        android:src="@drawable/water_icon"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -623,7 +661,8 @@
         android:layout_marginTop="476dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/water_icon" />
+        android:src="@drawable/water_icon"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -633,7 +672,8 @@
         android:layout_marginTop="544dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/water_icon" />
+        android:src="@drawable/water_icon"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/textView18"
@@ -655,6 +695,7 @@
         android:layout_marginTop="16dp"
         android:src="@drawable/back"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
