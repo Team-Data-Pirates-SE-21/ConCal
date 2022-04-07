@@ -43,11 +43,11 @@
         android:id="@+id/btnPredict"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="676dp"
+        android:layout_marginTop="664dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="Calculate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.442"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText" />
@@ -694,11 +694,11 @@
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="24dp"
         android:fontFamily="sans-serif-black"
         android:text="Compressive Concrete Strength"
-        android:textSize="24sp"
+        android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
