@@ -13,13 +13,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+
         <TextView
             android:id="@+id/appName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:fontFamily="monospace"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="serif-monospace"
             android:text="@string/t_t_concal"
             android:textColor="#023047"
             android:textSize="40sp"
@@ -27,14 +28,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
         <TextView
             android:id="@+id/textView24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="92dp"
-            android:fontFamily="monospace"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="88dp"
+            android:fontFamily="sans-serif-black"
             android:text="All options in a one place"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -441,6 +441,16 @@
             </androidx.cardview.widget.CardView>
 
         </GridLayout>
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="178dp"
+            android:layout_height="129dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/iconmain"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
