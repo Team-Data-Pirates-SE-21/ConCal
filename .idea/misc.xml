@@ -4,11 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/CHAMODA/Desktop/ConCal/app/src/main/res/layout/activity_brick_calculator.xml" value="0.3625" />
+        <entry key="..\:/Users/asus/Desktop/ConCal/app/src/main/res/layout/activity_concrete_strength.xml" value="0.2318840579710145" />
         <entry key="..\:/Users/asus/Desktop/ConCal/app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16_PREVIEW" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
