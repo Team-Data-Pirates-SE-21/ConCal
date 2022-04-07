@@ -1,9 +1,8 @@
 package com.example.concal;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -68,195 +67,97 @@ public class ConcreteStrength extends AppCompatActivity {
         LoadingDialog loadingDialog=new LoadingDialog(ConcreteStrength.this);//loading
 
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (input1.getText().toString().equals("0") && input2.getText().toString().equals("0") && input3.getText().toString().equals("0") && input4.getText().toString().equals("0") && input5.getText().toString().equals("0") && input6.getText().toString().equals("0") && input7.getText().toString().equals("0") && input8.getText().toString().equals("0")) {
-                    Toast toast=Toast.makeText(getApplicationContext(),"Empty Field",Toast.LENGTH_LONG);
-                    toast.show();
-                    output.setText("0.0");
-                    outputDefault.setText("0.0");
+        btn.setOnClickListener(view -> {
+            if (input1.getText().toString().equals("0") && input2.getText().toString().equals("0") && input3.getText().toString().equals("0") && input4.getText().toString().equals("0") && input5.getText().toString().equals("0") && input6.getText().toString().equals("0") && input7.getText().toString().equals("0") && input8.getText().toString().equals("0")) {
+                Toast toast=Toast.makeText(getApplicationContext(),"Empty Field",Toast.LENGTH_LONG);
+                toast.show();
+                output.setText("0.0");
+                outputDefault.setText("0.0");
 
-                }else if (notANumInRange(input1.getText().toString()) || notANumInRange(input2.getText().toString()) || notANumInRange(input3.getText().toString()) || notANumInRange(input4.getText().toString()) || notANumInRange(input5.getText().toString()) || notANumInRange(input6.getText().toString()) || notANumInRange(input7.getText().toString()) || notANumInRange(input8.getText().toString())) {
-                    Toast toast=Toast.makeText(getApplicationContext(),"All should positive numbers",Toast.LENGTH_LONG);
-                    toast.show();
-                    output.setText("0.0");
-                    outputDefault.setText("0.0");
+            }else if (notANumInRange(input1.getText().toString()) || notANumInRange(input2.getText().toString()) || notANumInRange(input3.getText().toString()) || notANumInRange(input4.getText().toString()) || notANumInRange(input5.getText().toString()) || notANumInRange(input6.getText().toString()) || notANumInRange(input7.getText().toString()) || notANumInRange(input8.getText().toString())) {
+                Toast toast=Toast.makeText(getApplicationContext(),"All should positive numbers",Toast.LENGTH_LONG);
+                toast.show();
+                output.setText("0.0");
+                outputDefault.setText("0.0");
 
-                }else if(input8.getText().toString().equals("0")||input8.getText().toString().equals("0.0")){
-                    Toast toast=Toast.makeText(getApplicationContext(),"Age can't be zero",Toast.LENGTH_LONG);
-                    toast.show();
-                    output.setText("0.0");
-                    outputDefault.setText("0.0");
-                } else{
-                    loadingDialog.startLoadingDialog();//starting the progressing
-                    StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-                            try {
-                                JSONObject jsonObject = new JSONObject((response));
-                                String data = jsonObject.getString("output");
-                                output.setText(data.toString() + " MPa");
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
+            }else if(input8.getText().toString().equals("0")||input8.getText().toString().equals("0.0")){
+                Toast toast=Toast.makeText(getApplicationContext(),"Age can't be zero",Toast.LENGTH_LONG);
+                toast.show();
+                output.setText("0.0");
+                outputDefault.setText("0.0");
+            } else{
+                loadingDialog.startLoadingDialog();//starting the progressing
+                StringRequest stringRequest = new StringRequest(Request.Method.POST, url, response -> {
+                    try {
+                        JSONObject jsonObject = new JSONObject((response));
+                        String data = jsonObject.getString("output");
+                        output.setText(data + " MPa");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
 
-                        }
-                    }, new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            Toast.makeText(ConcreteStrength.this, error.getMessage().toString(), Toast.LENGTH_LONG);
-                        }
+                }, error -> Toast.makeText(ConcreteStrength.this, error.getMessage(), Toast.LENGTH_LONG).show()) {
+                    @Override
+                    protected Map<String, String> getParams() {
+                        Map<String, String> params = new HashMap<String, String>();
+                        String input = input1.getText().toString() + " " + input2.getText().toString() + " " + input3.getText().toString() + " " + input4.getText().toString() + " " + input5.getText().toString() + " " + input6.getText().toString() + " " + input7.getText().toString() + " " + input8.getText().toString();
+                        params.put("inputs", input);
+                        return params;
+                    }
+                };
 
-                    }) {
-                        @Override
-                        protected Map<String, String> getParams() {
-                            Map<String, String> params = new HashMap<String, String>();
-                            String input = input1.getText().toString() + " " + input2.getText().toString() + " " + input3.getText().toString() + " " + input4.getText().toString() + " " + input5.getText().toString() + " " + input6.getText().toString() + " " + input7.getText().toString() + " " + input8.getText().toString();
-                            params.put("inputs", input);
-                            return params;
-                        }
-                    };
+                //default day
+                StringRequest stringRequestDefault = new StringRequest(Request.Method.POST, url, response -> {
+                    try {
+                        JSONObject jsonObject = new JSONObject((response));
+                        String data = jsonObject.getString("output");
+                        outputDefault.setText(data.toString() + " MPa");
+                        loadingDialog.dismissDialog();//remove the progressing
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
 
-                    //default day
-                    StringRequest stringRequestDefault = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-                            try {
-                                JSONObject jsonObject = new JSONObject((response));
-                                String data = jsonObject.getString("output");
-                                outputDefault.setText(data.toString() + " MPa");
-                                loadingDialog.dismissDialog();//remove the progressing
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(ConcreteStrength.this, error.getMessage().toString(), Toast.LENGTH_LONG).show();
+                    }
 
-                        }
-                    }, new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            Toast.makeText(ConcreteStrength.this, error.getMessage().toString(), Toast.LENGTH_LONG);
-                        }
-
-                    }) {
-                        @Override
-                        protected Map<String, String> getParams() {
-                            Map<String, String> params = new HashMap<String, String>();
-                            String input = input1.getText().toString() + " " + input2.getText().toString() + " " + input3.getText().toString() + " " + input4.getText().toString() + " " + input5.getText().toString() + " " + input6.getText().toString() + " " + input7.getText().toString() + " " + defaultDay;
-                            params.put("inputs", input);
-                            return params;
-                        }
-                    };
-                    //
-                    RequestQueue queue = Volley.newRequestQueue(ConcreteStrength.this);
-                    queue.add(stringRequest);
-                    queue.add(stringRequestDefault);
-                }
-
+                }) {
+                    @Override
+                    protected Map<String, String> getParams() {
+                        Map<String, String> params = new HashMap<>();
+                        String input = input1.getText().toString() + " " + input2.getText().toString() + " " + input3.getText().toString() + " " + input4.getText().toString() + " " + input5.getText().toString() + " " + input6.getText().toString() + " " + input7.getText().toString() + " " + defaultDay;
+                        params.put("inputs", input);
+                        return params;
+                    }
+                };
+                //
+                RequestQueue queue = Volley.newRequestQueue(ConcreteStrength.this);
+                queue.add(stringRequest);
+                queue.add(stringRequestDefault);
             }
         });
 
         //increment textfield value
-        maxCement.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                incrementNum(input1);
-            }
-        });
-        maxBlast.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                incrementNum(input2);
-            }
-        });
-        maxFly.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                incrementNum(input3);
-            }
-        });
-        maxWater.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                incrementNum(input4);
-            }
-        });
-        maxSuper.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                incrementNum(input5);
-            }
-        });
-        maxCoarse.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                incrementNum(input6);
-            }
-        });
-        maxFine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                incrementNum(input7);
-            }
-        });
-        maxAge.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                incrementNum(input8);
-            }
-        });
+        maxCement.setOnClickListener(view -> incrementNum(input1));
+        maxBlast.setOnClickListener(view -> incrementNum(input2));
+        maxFly.setOnClickListener(view -> incrementNum(input3));
+        maxWater.setOnClickListener(view -> incrementNum(input4));
+        maxSuper.setOnClickListener(view -> incrementNum(input5));
+        maxCoarse.setOnClickListener(view -> incrementNum(input6));
+        maxFine.setOnClickListener(view -> incrementNum(input7));
+        maxAge.setOnClickListener(view -> incrementNum(input8));
 
         //decrement textfield
-        minCement.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                decrementNum(input1);
-            }
-        });
-        minBlast.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                decrementNum(input2);
-            }
-        });
-        minFly.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                decrementNum(input3);
-            }
-        });
-        minWater.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                decrementNum(input4);
-            }
-        });
-        minSuper.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                decrementNum(input5);
-            }
-        });
-        minCoarse.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                decrementNum(input6);
-            }
-        });
-        minFine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                decrementNum(input7);
-            }
-        });
-        minAge.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                decrementNum(input8);
-            }
-        });
-
-
+        minCement.setOnClickListener(view -> decrementNum(input1));
+        minBlast.setOnClickListener(view -> decrementNum(input2));
+        minFly.setOnClickListener(view -> decrementNum(input3));
+        minWater.setOnClickListener(view -> decrementNum(input4));
+        minSuper.setOnClickListener(view -> decrementNum(input5));
+        minCoarse.setOnClickListener(view -> decrementNum(input6));
+        minFine.setOnClickListener(view -> decrementNum(input7));
+        minAge.setOnClickListener(view -> decrementNum(input8));
     }
 
     private boolean notANumInRange(String strNum){
@@ -273,12 +174,14 @@ public class ConcreteStrength extends AppCompatActivity {
         }
         return false;
     }
+    @SuppressLint("SetTextI18n")
     private void incrementNum(TextView textView){
-        Double newNum=Double.parseDouble(textView.getText().toString())+1;
-        textView.setText(newNum.toString());
+        double newNum=Double.parseDouble(textView.getText().toString())+1;
+        textView.setText(Double.toString(newNum));
     }
+    @SuppressLint("SetTextI18n")
     private void decrementNum(TextView textView){
-        Double newNum=Double.parseDouble(textView.getText().toString())-1;
-        textView.setText(newNum.toString());
+        double newNum=Double.parseDouble(textView.getText().toString())-1;
+        textView.setText(Double.toString(newNum));
     }
 }
