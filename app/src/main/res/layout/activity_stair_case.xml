@@ -156,16 +156,15 @@
         android:id="@+id/treadMinus"
         android:layout_width="37dp"
         android:layout_height="44dp"
-        android:layout_marginStart="166dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="-"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/treadPlus"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.216" />
+        app:layout_constraintVertical_bias="0.218" />
 
     <Button
         android:id="@+id/swidthMinus"
@@ -185,13 +184,12 @@
         android:id="@+id/sheightMinus"
         android:layout_width="37dp"
         android:layout_height="44dp"
-        android:layout_marginStart="160dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="-"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/sheightPlus"
-        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.42" />
