@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.view1: i = new Intent(this,ConcreteStrength.class);startActivity(i); break;
             case R.id.view2: i = new Intent(this,BrickCalculator.class);startActivity(i); break;
-//            case R.id.view3: i = new Intent(this,AirConditioner.class);startActivity(i); break;
+            case R.id.view3: i = new Intent(this,AirConditioner.class);startActivity(i); break;
 //            case R.id.view4: i = new Intent(this,WoodFrame.class);startActivity(i); break;
 //            case R.id.view5: i = new Intent(this,Flooring.class);startActivity(i); break;
             case R.id.view6: i = new Intent(this,StairCase.class);startActivity(i); break;
