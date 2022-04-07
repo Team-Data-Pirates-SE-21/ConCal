@@ -3,7 +3,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/backgroundColor"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -57,7 +57,8 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="18dp"
-                app:cardElevation="8dp">
+                app:cardElevation="8dp"
+                android:backgroundTint="@color/backgroundColor">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -65,11 +66,12 @@
                     android:orientation="vertical"
                     android:gravity="center"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    tools:ignore="UseCompoundDrawables">
+                    tools:ignore="UseCompoundDrawables"
+                    android:paddingVertical="10dp">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:contentDescription="@string/calculator"
                         android:src="@drawable/calculator1" />
                     <TextView
@@ -94,6 +96,7 @@
                 android:layout_margin="8dp"
                 app:cardCornerRadius="18dp"
                 app:cardElevation="8dp"
+                android:backgroundTint="@color/backgroundColor"
                 >
 
                 <LinearLayout
@@ -101,11 +104,12 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center"
-                    android:layout_gravity="center_vertical|center_horizontal">
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:paddingVertical="10dp">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:contentDescription="@string/bricks"
                         android:src="@drawable/brick" />
                     <TextView
@@ -130,6 +134,7 @@
                 android:layout_margin="8dp"
                 app:cardCornerRadius="18dp"
                 app:cardElevation="8dp"
+                android:backgroundTint="@color/backgroundColor"
                 >
 
                 <LinearLayout
@@ -137,11 +142,12 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center"
-                    android:layout_gravity="center_vertical|center_horizontal">
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:paddingVertical="10dp">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:contentDescription="@string/ac"
                         android:src="@drawable/airconditioner" />
                     <TextView
@@ -166,6 +172,7 @@
                 android:layout_margin="8dp"
                 app:cardCornerRadius="18dp"
                 app:cardElevation="8dp"
+                android:backgroundTint="@color/backgroundColor"
                 >
 
                 <LinearLayout
@@ -173,11 +180,12 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center"
+                    android:paddingVertical="10dp"
                     android:layout_gravity="center_vertical|center_horizontal">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:contentDescription="@string/wood_frame"
                         android:src="@drawable/frame" />
                     <TextView
@@ -202,6 +210,7 @@
                 android:layout_margin="8dp"
                 app:cardCornerRadius="18dp"
                 app:cardElevation="8dp"
+                android:backgroundTint="@color/backgroundColor"
                 >
 
                 <LinearLayout
@@ -209,11 +218,13 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center"
-                    android:layout_gravity="center_vertical|center_horizontal">
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:paddingVertical="10dp"
+                    >
 
                     <ImageView
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:contentDescription="@string/flooring"
                         android:src="@drawable/floor" />
                     <TextView
@@ -238,6 +249,7 @@
                 android:layout_margin="8dp"
                 app:cardCornerRadius="18dp"
                 app:cardElevation="8dp"
+                android:backgroundTint="@color/backgroundColor"
                 >
 
                 <LinearLayout
@@ -245,10 +257,11 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center"
+                    android:paddingVertical="10dp"
                     android:layout_gravity="center_vertical|center_horizontal">
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:src="@drawable/staircasee"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -272,6 +285,7 @@
                 android:layout_margin="8dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
+                android:backgroundTint="@color/backgroundColor"
                 >
 
                 <LinearLayout
@@ -279,10 +293,11 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center"
+                    android:paddingVertical="10dp"
                     android:layout_gravity="center_vertical|center_horizontal">
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:src="@drawable/steel"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -306,6 +321,7 @@
                 android:layout_margin="8dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
+                android:backgroundTint="@color/backgroundColor"
                 >
 
                 <LinearLayout
@@ -313,10 +329,11 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center"
+                    android:paddingVertical="10dp"
                     android:layout_gravity="center_vertical|center_horizontal">
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:src="@drawable/termite"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -340,6 +357,7 @@
                 android:layout_margin="8dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
+                android:backgroundTint="@color/backgroundColor"
                 >
 
                 <LinearLayout
@@ -347,11 +365,12 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center"
+                    android:paddingVertical="10dp"
                     android:layout_gravity="center_vertical|center_horizontal">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:src="@drawable/solarrooftop"
                         app:srcCompat="@drawable/solarrooftop"
                         tools:srcCompat="@drawable/solarrooftop" />
@@ -378,6 +397,7 @@
                 android:layout_margin="8dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
+                android:backgroundTint="@color/backgroundColor"
                 >
 
                 <LinearLayout
@@ -385,11 +405,12 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center"
+                    android:paddingVertical="10dp"
                     android:layout_gravity="center_vertical|center_horizontal">
 
                     <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="72dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:src="@drawable/watertank"
                         app:srcCompat="@drawable/watertank"
                         tools:srcCompat="@drawable/watertank" />
