@@ -11,7 +11,6 @@
         android:id="@+id/lengthMinus"
         android:layout_width="37dp"
         android:layout_height="44dp"
-        android:backgroundTint="@android:color/holo_orange_dark"
         android:text="-"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,13 +19,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.095"
+        android:background="@drawable/circlebackgroundbutton"
         tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/quantityPlus"
         android:layout_width="44dp"
         android:layout_height="44dp"
-        android:backgroundTint="@android:color/holo_orange_dark"
         android:text="+"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,13 +34,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.196"
+        android:background="@drawable/circlebackgroundbutton"
         tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/lengthPlus"
         android:layout_width="44dp"
         android:layout_height="44dp"
-        android:backgroundTint="@android:color/holo_orange_dark"
+        android:background="@drawable/circlebackgroundbutton"
         android:text="+"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -56,7 +56,7 @@
         android:id="@+id/quantityMinus"
         android:layout_width="37dp"
         android:layout_height="44dp"
-        android:backgroundTint="@android:color/holo_orange_dark"
+        android:background="@drawable/circlebackgroundbutton"
         android:text="-"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -385,7 +385,7 @@
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/holo_orange_dark"
+        android:background="@drawable/circlebackgroundbutton"
         android:text="Calculate"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
