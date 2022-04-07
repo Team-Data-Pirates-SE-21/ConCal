@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Concal</string>
     <string name="space" />
-    <string name="t_t_concal">\t\t ConCal</string>
+    <string name="t_t_concal">ConCal</string>
     <string name="space2" />
     <string name="concrete_strength_ncalculator">Concrete Strength \nCalculator</string>
     <string name="flooring_calculator">Flooring Calculator</string>
