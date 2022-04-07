@@ -593,10 +593,12 @@
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="96dp"
+        android:contentDescription="cement"
+        android:src="@drawable/water_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/water_icon"
-        android:contentDescription="cement" />
+        app:srcCompat="@drawable/cement1"
+        tools:srcCompat="@drawable/cement1" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -604,10 +606,12 @@
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="160dp"
+        android:src="@drawable/water_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/water_icon"
-        tools:ignore="ContentDescription" />
+        app:srcCompat="@drawable/powder"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/powder" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -615,10 +619,12 @@
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="212dp"
+        android:src="@drawable/water_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/water_icon"
-        tools:ignore="ContentDescription" />
+        app:srcCompat="@drawable/blast"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/blast" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -626,10 +632,12 @@
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="272dp"
+        android:src="@drawable/water_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/water_icon"
-        tools:ignore="ContentDescription" />
+        app:srcCompat="@drawable/water"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/water" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -648,10 +656,12 @@
         android:layout_height="45dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="408dp"
+        android:src="@drawable/water_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/water_icon"
-        tools:ignore="ContentDescription" />
+        app:srcCompat="@drawable/stones"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/stones" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -659,10 +669,12 @@
         android:layout_height="45dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="476dp"
+        android:src="@drawable/water_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/water_icon"
-        tools:ignore="ContentDescription" />
+        app:srcCompat="@drawable/sand"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/sand" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -670,9 +682,10 @@
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="544dp"
+        android:src="@drawable/water_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/water_icon"
+        app:srcCompat="@drawable/age"
         tools:ignore="ContentDescription" />
 
     <TextView
