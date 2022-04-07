@@ -91,7 +91,7 @@ public class ConcreteStrength extends AppCompatActivity {
                     try {
                         JSONObject jsonObject = new JSONObject((response));
                         String data = jsonObject.getString("output");
-                        output.setText(data + " MPa");
+                        output.setText(data.toString() + " MPa");
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
