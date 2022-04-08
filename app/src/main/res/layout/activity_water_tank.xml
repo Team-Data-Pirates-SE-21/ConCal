@@ -191,7 +191,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.159"
-        tools:ignore="LabelFor,TextFields" />
+        tools:ignore="LabelFor,TextFields"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:id="@+id/wWidth"
@@ -211,7 +212,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.26"
-        tools:ignore="LabelFor,TextFields" />
+        tools:ignore="LabelFor,TextFields"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:id="@+id/depth"
@@ -231,7 +233,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.344"
-        tools:ignore="LabelFor,TextFields" />
+        tools:ignore="LabelFor,TextFields"
+        android:background="@android:color/transparent"/>
 
     <TextView
         android:id="@+id/capacity"

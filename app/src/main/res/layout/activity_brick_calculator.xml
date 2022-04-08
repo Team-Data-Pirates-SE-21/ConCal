@@ -226,7 +226,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.096"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:id="@+id/tLength"
@@ -266,7 +267,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.683"
-        tools:ignore="HardcodedText,TextFields" />
+        tools:ignore="HardcodedText,TextFields"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:id="@+id/bHeight"
@@ -286,7 +288,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.681"
-        tools:ignore="HardcodedText,TextFields" />
+        tools:ignore="HardcodedText,TextFields"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:id="@+id/units"
@@ -306,7 +309,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.196"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        android:background="@android:color/transparent"/>
 
     <Spinner
         android:id="@+id/memberType"
@@ -487,7 +491,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.62"
         app:srcCompat="@drawable/height"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        android:background="@android:color/transparent"/>
 
     <ImageView
         android:id="@+id/imageView2"
