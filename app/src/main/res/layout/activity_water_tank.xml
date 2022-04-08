@@ -31,7 +31,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.151"
         app:srcCompat="@drawable/length"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/length" />
 
     <Button
         android:id="@+id/cal"
@@ -285,7 +286,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.253"
         app:srcCompat="@drawable/width"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/width" />
 
     <ImageView
         android:id="@+id/imageView20"
@@ -298,7 +300,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.337"
         app:srcCompat="@drawable/depth"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/depth" />
 
     <TextView
         android:id="@+id/textView34"

@@ -15,6 +15,12 @@
             android:name=".AirConditioner"
             android:exported="false" />
         <activity
+            android:name=".WaterTank"
+            android:exported="false" />
+        <activity
+            android:name=".SolarRooftop"
+            android:exported="false" />
+        <activity
             android:name=".SteelQuantity"
             android:exported="false" />
         <activity
