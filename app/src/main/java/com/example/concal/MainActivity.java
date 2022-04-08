@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.view5: i = new Intent(this,Flooring.class);startActivity(i); break;
             case R.id.view6: i = new Intent(this,StairCase.class);startActivity(i); break;
             case R.id.view7: i = new Intent(this,SteelQuantity.class);startActivity(i); break;
-//            case R.id.view8: i = new Intent(this,AntiTermite.class);startActivity(i); break;
+            case R.id.view8: i = new Intent(this,AntiTermite.class);startActivity(i); break;
             case R.id.view9: i = new Intent(this,SolarRooftop.class);startActivity(i); break;
             case R.id.view10: i = new Intent(this,WaterTank.class);startActivity(i); break;
             default: break;

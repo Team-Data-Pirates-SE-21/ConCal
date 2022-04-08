@@ -6,10 +6,49 @@
     android:layout_height="match_parent"
     tools:ignore="HardcodedText" >
 
+    <TextView
+        android:id="@+id/textView52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="m"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.211"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.176"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="m"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.211"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.274"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/iconback"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
     <ImageView
         android:id="@+id/imageView16"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.084"
@@ -23,6 +62,7 @@
         android:id="@+id/cal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/circlebackgroundbutton"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:text="Calculate"
         android:textSize="15sp"
@@ -36,6 +76,7 @@
         android:id="@+id/lPlus"
         android:layout_width="44dp"
         android:layout_height="44dp"
+        android:background="@drawable/circlebackgroundbutton"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:text="+"
         android:textSize="20sp"
@@ -50,6 +91,7 @@
         android:id="@+id/wPlus"
         android:layout_width="44dp"
         android:layout_height="44dp"
+        android:background="@drawable/circlebackgroundbutton"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:text="+"
         android:textSize="20sp"
@@ -64,6 +106,7 @@
         android:id="@+id/wMinus"
         android:layout_width="37dp"
         android:layout_height="44dp"
+        android:background="@drawable/circlebackgroundbutton"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:text="-"
         android:textSize="20sp"
@@ -78,6 +121,7 @@
         android:id="@+id/lMinus"
         android:layout_width="37dp"
         android:layout_height="44dp"
+        android:background="@drawable/circlebackgroundbutton"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:text="-"
         android:textSize="20sp"
@@ -90,31 +134,33 @@
 
     <TextView
         android:id="@+id/textView24"
+        android:fontFamily="sans-serif-black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Length"
         android:textColor="@color/black"
-        android:textSize="15sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.224"
+        app:layout_constraintHorizontal_bias="0.226"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.165" />
+        app:layout_constraintVertical_bias="0.146" />
 
     <TextView
         android:id="@+id/textView25"
+        android:fontFamily="sans-serif-black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Width"
         android:textColor="@color/black"
-        android:textSize="15sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintHorizontal_bias="0.221"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.265" />
+        app:layout_constraintVertical_bias="0.245" />
 
     <EditText
         android:id="@+id/wLength"
@@ -160,15 +206,16 @@
         android:id="@+id/capacity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
         android:text="0.0 ml"
         android:textColor="@android:color/holo_orange_dark"
-        android:textSize="20sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.814"
+        app:layout_constraintHorizontal_bias="0.885"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.683" />
+        app:layout_constraintVertical_bias="0.686" />
 
     <TextView
         android:id="@+id/textView2"
@@ -185,8 +232,8 @@
 
     <ImageView
         android:id="@+id/imageView18"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.084"
@@ -198,6 +245,7 @@
 
     <TextView
         android:id="@+id/textView34"
+        android:fontFamily="sans-serif-black"
         android:layout_width="226dp"
         android:layout_height="31dp"
         android:text="Quantity of Anti-Termite"
@@ -212,6 +260,7 @@
 
     <TextView
         android:id="@+id/textView39"
+        android:fontFamily="sans-serif-black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enter all the inputs in meters."
