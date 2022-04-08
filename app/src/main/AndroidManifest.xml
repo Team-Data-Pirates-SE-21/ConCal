@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ConCal">
         <activity
+            android:name=".WoodFrame"
+            android:exported="false" />
+        <activity
             android:name=".AirConditioner"
             android:exported="false" />
         <activity
