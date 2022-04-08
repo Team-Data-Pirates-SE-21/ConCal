@@ -82,7 +82,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.151"
         android:autofillHints="concrete quantity"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText"
+        android:background="@android:color/transparent"/>
 
     <Spinner
         android:id="@+id/memberType"
@@ -125,7 +126,7 @@
 
     <Button
         android:id="@+id/submit"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:background="@drawable/circlebackgroundbutton"
         android:text="Calculate"

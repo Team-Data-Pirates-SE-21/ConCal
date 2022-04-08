@@ -315,7 +315,8 @@
         app:layout_constraintHorizontal_bias="0.776"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.117" />
+        app:layout_constraintVertical_bias="0.117"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:id="@+id/tr"
@@ -334,7 +335,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.216"
-        android:autofillHints="Tread in m" />
+        android:autofillHints="Tread in m"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:id="@+id/wi"
@@ -353,7 +355,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.317"
-        android:autofillHints="Width in m" />
+        android:autofillHints="Width in m"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:id="@+id/he"
@@ -372,7 +375,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.419"
-        android:autofillHints="Height in m" />
+        android:autofillHints="Height in m"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:id="@+id/th"
@@ -391,7 +395,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.52"
-        android:autofillHints="Thickness in m" />
+        android:autofillHints="Thickness in m"
+        android:background="@android:color/transparent" />
 
     <TextView
         android:id="@+id/textView18"
@@ -489,7 +494,7 @@
 
     <Button
         android:id="@+id/submit"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:background="@drawable/circlebackgroundbutton"
         android:text="Calculate"

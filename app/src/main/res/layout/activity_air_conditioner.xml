@@ -150,7 +150,7 @@
 
     <Button
         android:id="@+id/calculate"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:background="@drawable/circlebackgroundbutton"
         android:text="Calculate"
@@ -249,7 +249,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.163"
-        tools:ignore="LabelFor,TextFields,TouchTargetSizeCheck" />
+        tools:ignore="LabelFor,TextFields,TouchTargetSizeCheck"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:id="@+id/personCount"
@@ -269,7 +270,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.47"
-        tools:ignore="LabelFor" />
+        tools:ignore="LabelFor"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:id="@+id/rBreadth"
@@ -289,7 +291,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.269"
-        tools:ignore="LabelFor" />
+        tools:ignore="LabelFor"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:id="@+id/rHeight"
@@ -309,7 +312,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.373"
-        tools:ignore="LabelFor,TextFields" />
+        tools:ignore="LabelFor,TextFields"
+        android:background="@android:color/transparent"/>
 
     <EditText
         android:id="@+id/maxTemp"
@@ -329,7 +333,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.577"
-        tools:ignore="LabelFor" />
+        tools:ignore="LabelFor"
+        android:background="@android:color/transparent"/>
 
     <TextView
         android:id="@+id/output"
