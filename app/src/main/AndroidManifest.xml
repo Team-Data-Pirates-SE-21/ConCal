@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ConCal">
         <activity
+            android:name=".AntiTermite"
+            android:exported="false" />
+        <activity
             android:name=".Flooring"
             android:exported="false" />
         <activity
