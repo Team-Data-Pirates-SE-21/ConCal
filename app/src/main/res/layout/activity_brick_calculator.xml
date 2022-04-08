@@ -336,6 +336,7 @@
 
     <TextView
         android:id="@+id/textView18"
+        android:fontFamily="sans-serif-black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Brick Count"
@@ -351,6 +352,7 @@
 
     <TextView
         android:id="@+id/textView19"
+        android:fontFamily="sans-serif-black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cement (bags)"
@@ -366,6 +368,7 @@
 
     <TextView
         android:id="@+id/textView20"
+        android:fontFamily="sans-serif-black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sand in kg"
@@ -381,6 +384,7 @@
 
     <TextView
         android:id="@+id/sandOut"
+        android:fontFamily="sans-serif-black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0 bags"
@@ -395,6 +399,7 @@
 
     <TextView
         android:id="@+id/solarCount"
+        android:fontFamily="sans-serif-black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0.0 kg"
@@ -409,6 +414,7 @@
 
     <TextView
         android:id="@+id/cementOut"
+        android:fontFamily="sans-serif-black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0 bricks"
@@ -419,7 +425,8 @@
         app:layout_constraintHorizontal_bias="0.828"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.782" />
+        app:layout_constraintVertical_bias="0.782"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/submit"
