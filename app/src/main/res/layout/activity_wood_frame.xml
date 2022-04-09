@@ -50,7 +50,7 @@
         tools:ignore="HardcodedText" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/imageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
