@@ -196,7 +196,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.151"
         app:srcCompat="@drawable/cement1"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        android:background="@color/appBackground"/>
 
     <TextView
         android:id="@+id/textView33"

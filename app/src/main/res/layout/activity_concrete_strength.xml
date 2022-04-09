@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:ignore="HardcodedText"
-    android:background="#e3ecfa"
+    android:background="@color/appBackground"
     app:guidelineUseRtl="false"
     tools:context=".MainActivity">
 

@@ -10,5 +10,6 @@
     <color name="orange">#BF8B67</color>
     <color name="button">#f78888</color>
     <color name="backgroundColor">#d4e3fa</color>
+    <color name="appBackground">#e3ecfa</color>
     <color name="red">#525E75</color>
 </resources>
