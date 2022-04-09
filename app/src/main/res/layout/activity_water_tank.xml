@@ -167,7 +167,6 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:text="Length"
-        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -182,7 +181,6 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:text="Width"
-        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -197,7 +195,6 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:text="Depth"
-        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -301,6 +298,7 @@
 
     <TextView
         android:id="@+id/textView2"
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"

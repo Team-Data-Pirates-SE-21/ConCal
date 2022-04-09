@@ -168,7 +168,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Length of Room"
-        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -183,7 +182,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Breadth of Room"
-        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -198,7 +196,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Height of Room"
-        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -213,7 +210,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="No of person"
-        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -228,8 +224,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Max temperature\nin celcius"
-        android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.195"
@@ -374,6 +369,7 @@
 
     <TextView
         android:id="@+id/textView"
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
@@ -500,7 +496,7 @@
         app:layout_constraintHorizontal_bias="0.162"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.277"
+        app:layout_constraintVertical_bias="0.282"
         tools:ignore="HardcodedText" />
 
     <TextView
@@ -535,14 +531,14 @@
         android:id="@+id/textView31"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Persons"
+        android:text="Person count"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.487"
+        app:layout_constraintVertical_bias="0.493"
         tools:ignore="HardcodedText" />
 
 

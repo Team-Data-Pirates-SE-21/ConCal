@@ -46,6 +46,7 @@
 
     <TextView
         android:id="@+id/textView35"
+        android:fontFamily="sans-serif-black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Volume of Staircase"
@@ -215,7 +216,6 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:text="Riser"
-        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -230,7 +230,6 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:text="Tread"
-        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -245,7 +244,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Grade of concrete"
-        android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -260,7 +258,6 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:text="Width of stair"
-        android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -275,7 +272,6 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:text="Height of \nstair"
-        android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -290,7 +286,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Thickness of \nwaist slab"
-        android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -401,6 +396,7 @@
 
     <TextView
         android:id="@+id/textView18"
+        android:fontFamily="sans-serif-black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Aggregate in tons"
@@ -415,6 +411,7 @@
 
     <TextView
         android:id="@+id/textView19"
+        android:fontFamily="sans-serif-black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cement bags"
@@ -429,6 +426,7 @@
 
     <TextView
         android:id="@+id/textView20"
+        android:fontFamily="sans-serif-black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sand in tons"
@@ -445,8 +443,9 @@
         android:id="@+id/out2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/orange"
-        android:textSize="15sp"
+        android:text="0.0 Ton"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.802"
@@ -458,8 +457,9 @@
         android:id="@+id/out3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/orange"
-        android:textSize="15sp"
+        android:text="0.0 Ton"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.802"
@@ -471,8 +471,9 @@
         android:id="@+id/out"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/orange"
-        android:textSize="15sp"
+        android:text="0 bags"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.802"
@@ -484,8 +485,9 @@
         android:id="@+id/out4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/orange"
-        android:textSize="15sp"
+        android:text="0.0 ft^3"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.802"
@@ -508,6 +510,7 @@
 
     <TextView
         android:id="@+id/View"
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
@@ -515,10 +518,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.66"
+        app:layout_constraintHorizontal_bias="0.679"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.038" />
+        app:layout_constraintVertical_bias="0.037" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -596,7 +599,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.698" />
+        app:layout_constraintVertical_bias="0.692" />
 
     <ImageView
         android:id="@+id/imageView45"

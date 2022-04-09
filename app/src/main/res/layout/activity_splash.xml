@@ -4,15 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/backgroundColor"
     tools:context=".Splash">
 
     <ImageView
         android:id="@+id/imageView22"
-        android:layout_width="209dp"
-        android:layout_height="208dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/brick" />
+        app:layout_constraintVertical_bias="0.452"
+        app:srcCompat="@drawable/appicon" />
 </androidx.constraintlayout.widget.ConstraintLayout>
