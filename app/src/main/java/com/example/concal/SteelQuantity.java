@@ -1,5 +1,6 @@
 package com.example.concal;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -18,7 +19,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SteelQuantity extends AppCompatActivity {
-
+    TextView outputs;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,7 @@ public class SteelQuantity extends AppCompatActivity {
 
         Button submit = findViewById(R.id.submit);
 
-        TextView outputs = findViewById(R.id.out3);
+        outputs = findViewById(R.id.out3);
 
         List<String> memberTypes = Arrays.asList("Footing", "Beam", "Column", "Slab", "StairCase", "Lintle/Coping", "Retaining Wall");
         Spinner memberType = findViewById(R.id.memberType);
@@ -36,6 +37,11 @@ public class SteelQuantity extends AppCompatActivity {
         memberType.setAdapter(adapter);
 
         EditText quantity = findViewById(R.id.width2);
+
+        if(savedInstanceState!=null){//recover the variables
+            outputs.setText(savedInstanceState.getString("outputs"));
+
+        }
 
         submit.setOnClickListener(view -> {
 
@@ -126,5 +132,17 @@ public class SteelQuantity extends AppCompatActivity {
     private void decrementNum(TextView textView){
         double newNum=Double.parseDouble(textView.getText().toString())-1;
         textView.setText(Double.toString(newNum));
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("outputs",outputs.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        savedInstanceState.getString("outputs");
     }
 }
