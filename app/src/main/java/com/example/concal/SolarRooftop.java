@@ -1,5 +1,6 @@
 package com.example.concal;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -19,6 +20,11 @@ import java.util.List;
 
 public class SolarRooftop extends AppCompatActivity {
 
+    TextView panelCount ;
+    TextView system ;
+    TextView dailyUnits ;
+    TextView rooftopArea ;
+
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +33,10 @@ public class SolarRooftop extends AppCompatActivity {
 
         Button submit = findViewById(R.id.submit);
 
-        TextView panelCount = findViewById(R.id.solarCount);
-        TextView system = findViewById(R.id.systemOut);
-        TextView dailyUnits = findViewById(R.id.dailyUnit);
-        TextView rooftopArea = findViewById(R.id.rooftopArea);
+        panelCount = findViewById(R.id.solarCount);
+        system = findViewById(R.id.systemOut);
+        dailyUnits = findViewById(R.id.dailyUnit);
+        rooftopArea = findViewById(R.id.rooftopArea);
 
         List<String> consumptionTypes = Arrays.asList("Monthly", "Yearly");
         Spinner consumptionType = findViewById(R.id.memberType);
@@ -39,6 +45,16 @@ public class SolarRooftop extends AppCompatActivity {
         consumptionType.setAdapter(adapter);
 
         EditText units = findViewById(R.id.units);
+
+
+        if(savedInstanceState!=null){//recover the variables
+            panelCount.setText(savedInstanceState.getString("panelCount"));
+            system.setText(savedInstanceState.getString("system"));
+            dailyUnits.setText(savedInstanceState.getString("dailyUnits"));
+            rooftopArea.setText(savedInstanceState.getString("rooftopArea"));
+
+
+        }
 
         submit.setOnClickListener(view -> {
 
@@ -122,12 +138,30 @@ public class SolarRooftop extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     private void incrementNum(TextView textView){
-        int newNum = Integer.parseInt(textView.getText().toString())+1;
+        double newNum=Double.parseDouble(textView.getText().toString())+1;
         textView.setText(Double.toString(newNum));
     }
     @SuppressLint("SetTextI18n")
     private void decrementNum(TextView textView){
-        int newNum = Integer.parseInt(textView.getText().toString())-1;
+        double newNum=Double.parseDouble(textView.getText().toString())-1;
         textView.setText(Double.toString(newNum));
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("panelCount",panelCount.getText().toString());
+        outState.putString("system",system.getText().toString());
+        outState.putString("dailyUnits",dailyUnits.getText().toString());
+        outState.putString("rooftopArea",rooftopArea.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        savedInstanceState.getString("panelCount");
+        savedInstanceState.getString("system");
+        savedInstanceState.getString("dailyUnits");
+        savedInstanceState.getString("rooftopArea");
     }
 }

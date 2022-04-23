@@ -138,7 +138,7 @@ public class WaterTank extends AppCompatActivity {
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        savedInstanceState.getInt("result");
-        savedInstanceState.getInt("volumeResult");
+        savedInstanceState.getString("result");
+        savedInstanceState.getString("volumeResult");
     }
 }
