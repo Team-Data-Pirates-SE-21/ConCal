@@ -1,10 +1,12 @@
 package com.example.concal;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +15,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class WaterTank extends AppCompatActivity {
+    EditText length;
+    EditText width;
+    EditText depth;
+    TextView result;
+    TextView volumeResult;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -20,14 +27,21 @@ public class WaterTank extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_water_tank);
 
-        EditText length = findViewById(R.id.wLength);
-        EditText width = findViewById(R.id.wWidth);
-        EditText depth = findViewById(R.id.depth);
+        length = findViewById(R.id.wLength);
+        width = findViewById(R.id.wWidth);
+        depth = findViewById(R.id.depth);
 
         Button calculate = findViewById(R.id.cal);
 
-        TextView result = findViewById(R.id.capacity);
-        TextView volumeResult = findViewById(R.id.volumeOut2);
+        result = findViewById(R.id.capacity);
+        volumeResult = findViewById(R.id.volumeOut2);
+
+        if(savedInstanceState!=null){//recover the variables
+            result.setText(savedInstanceState.getString("result"));
+            volumeResult.setText(savedInstanceState.getString("volumeResult"));
+
+
+        }
 
         calculate.setOnClickListener(v -> {
 
@@ -112,5 +126,19 @@ public class WaterTank extends AppCompatActivity {
     private void decrementNum(TextView textView){
         double newNum=Double.parseDouble(textView.getText().toString())-1;
         textView.setText(Double.toString(newNum));
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("result",result.getText().toString());
+        outState.putString("volumeResult",volumeResult.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        savedInstanceState.getInt("result");
+        savedInstanceState.getInt("volumeResult");
     }
 }
