@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+// Home screen of the application
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         CardView card9 = findViewById(R.id.view9);
         CardView card10 = findViewById(R.id.view10);
 
+        //Setting onClickListener to the cardViews
         card1.setOnClickListener(this);
         card2.setOnClickListener(this);
         card3.setOnClickListener(this);
@@ -43,9 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
-        Intent i;
+        Intent i;   //Intent to be used to start the next activity
 
-        switch (view.getId()) {
+        switch (view.getId()) {  //Switch case to determine which cardView was clicked
             case R.id.view1: i = new Intent(this,ConcreteStrength.class);startActivity(i); break;
             case R.id.view2: i = new Intent(this,BrickCalculator.class);startActivity(i); break;
             case R.id.view3: i = new Intent(this,AirConditioner.class);startActivity(i); break;

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+// Splash screen of the application
 public class Splash extends AppCompatActivity {
 
     @Override
@@ -13,7 +14,7 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-
+        // After delay of 3 seconds, go to the home screen
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -21,5 +22,5 @@ public class Splash extends AppCompatActivity {
                 startActivity(i);
                 finish();
             }
-        },2000);
+        },3000);
 }}
