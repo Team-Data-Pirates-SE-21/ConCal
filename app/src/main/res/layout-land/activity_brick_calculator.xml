@@ -225,8 +225,8 @@
 
     <EditText
         android:id="@+id/tLength"
-        android:layout_width="103dp"
-        android:layout_height="45dp"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
         android:autofillHints=""
         android:ems="10"
         android:gravity="center"
@@ -234,18 +234,18 @@
         android:inputType="numberSigned|numberDecimal"
         android:text="0.0"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintHorizontal_bias="0.289"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.685"
+        app:layout_constraintVertical_bias="0.721"
         tools:ignore="HardcodedText,TextFields" />
 
     <EditText
         android:id="@+id/tWidth"
-        android:layout_width="115dp"
+        android:layout_width="95dp"
         android:layout_height="43dp"
         android:autofillHints=""
         android:background="@android:color/transparent"
@@ -255,35 +255,35 @@
         android:inputType="numberSigned|numberDecimal"
         android:text="0.0"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.573"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.739"
+        app:layout_constraintVertical_bias="0.706"
         tools:ignore="HardcodedText,TextFields" />
 
     <EditText
         android:id="@+id/bHeight"
-        android:layout_width="139dp"
-        android:layout_height="47dp"
+        android:layout_width="95dp"
+        android:layout_height="50dp"
         android:autofillHints=""
+        android:background="@android:color/transparent"
         android:ems="10"
         android:gravity="center"
         android:hint="Brick height in m"
         android:inputType="numberSigned|numberDecimal"
         android:text="0.0"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintHorizontal_bias="0.861"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.681"
-        tools:ignore="HardcodedText,TextFields"
-        android:background="@android:color/transparent"/>
+        tools:ignore="HardcodedText,TextFields" />
 
     <EditText
         android:id="@+id/units"
@@ -424,8 +424,8 @@
 
     <Button
         android:id="@+id/submit"
-        android:layout_width="296dp"
-        android:layout_height="40dp"
+        android:layout_width="214dp"
+        android:layout_height="38dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="Calculate"
         android:textSize="15sp"
