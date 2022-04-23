@@ -1,5 +1,6 @@
 package com.example.concal;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 
 public class AntiTermite extends AppCompatActivity {
 
+    TextView result;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +27,7 @@ public class AntiTermite extends AppCompatActivity {
 
         Button calculate = findViewById(R.id.cal);
 
-        TextView result = findViewById(R.id.capacity);
+        result = findViewById(R.id.capacity);
 
         calculate.setOnClickListener(v -> {
 
@@ -66,6 +68,10 @@ public class AntiTermite extends AppCompatActivity {
 
         //backButton
         ImageButton back=findViewById(R.id.imageButton);
+
+        if(savedInstanceState!=null){//recover the variables
+            result.setText(savedInstanceState.getString("result"));
+        }
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -100,5 +106,17 @@ public class AntiTermite extends AppCompatActivity {
     private void decrementNum(TextView textView){
         double newNum=Double.parseDouble(textView.getText().toString())-1;
         textView.setText(Double.toString(newNum));
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("result",result.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        savedInstanceState.getString("result");
     }
 }
