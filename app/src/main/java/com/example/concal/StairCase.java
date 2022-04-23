@@ -1,5 +1,6 @@
 package com.example.concal;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -19,6 +20,10 @@ import java.util.List;
 
 public class StairCase extends AppCompatActivity {
 
+    TextView out ;
+    TextView cementOut;
+    TextView sandOut;
+    TextView volumeOut;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +44,10 @@ public class StairCase extends AppCompatActivity {
         gradeSpinner.setAdapter(adapter);
 
 
-        TextView out = findViewById(R.id.out);
-        TextView cementOut = findViewById(R.id.out2);
-        TextView sandOut = findViewById(R.id.out3);
-        TextView volumeOut = findViewById(R.id.out4);
+        out = findViewById(R.id.out);
+        cementOut = findViewById(R.id.out2);
+        sandOut = findViewById(R.id.out3);
+        volumeOut = findViewById(R.id.out4);
 
         Button submit = findViewById(R.id.submit);
 
@@ -159,6 +164,15 @@ public class StairCase extends AppCompatActivity {
         Button sMinus = findViewById(R.id.sthickMinus);
         Button sPlus = findViewById(R.id.sthickPlus);
 
+        if(savedInstanceState!=null){//recover the variables
+            out.setText(savedInstanceState.getString("out"));
+            cementOut.setText(savedInstanceState.getString("cementOut"));
+            sandOut.setText(savedInstanceState.getString("sandOut"));
+            volumeOut.setText(savedInstanceState.getString("volumeOut"));
+
+
+        }
+
         //Setting plus, minus buttons.
         rMinus.setOnClickListener(view -> decrementNum(riser));
         rPlus.setOnClickListener(view -> incrementNum(riser));
@@ -211,5 +225,23 @@ public class StairCase extends AppCompatActivity {
     private void decrementNum(TextView textView){
         double newNum=Double.parseDouble(textView.getText().toString())-1.0;
         textView.setText(Double.toString(newNum));
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("out",out.getText().toString());
+        outState.putString("cementOut",cementOut.getText().toString());
+        outState.putString("sandOut",sandOut.getText().toString());
+        outState.putString("volumeOut",volumeOut.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        savedInstanceState.getString("out");
+        savedInstanceState.getString("volumeResult");
+        savedInstanceState.getString("sandOut");
+        savedInstanceState.getString("volumeOut");
     }
 }
