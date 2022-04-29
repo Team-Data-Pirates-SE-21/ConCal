@@ -2,7 +2,6 @@ package com.example.concal;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+// Class for the wood frame calculator option
 public class WoodFrame extends AppCompatActivity {
 
     TextView result;
@@ -22,6 +22,7 @@ public class WoodFrame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wood_frame);
 
+        // Initialize the elements
         EditText length = findViewById(R.id.wLength);
         EditText depth = findViewById(R.id.wWidth);
         EditText thickness = findViewById(R.id.fThickness);
@@ -36,6 +37,7 @@ public class WoodFrame extends AppCompatActivity {
 
         calculate.setOnClickListener(v -> {
 
+            // Validate the inputs
             if (length.getText().toString().equals("0.0") || depth.getText().toString().equals("0.0") || thickness.getText().toString().equals("0.0")) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Please fill the empty fields", Toast.LENGTH_LONG);
                 toast.show();
@@ -59,6 +61,7 @@ public class WoodFrame extends AppCompatActivity {
             }
         });
 
+        // Initialize the '+', '-' buttons
         Button lMinus = findViewById(R.id.lMinus);
         Button lPlus = findViewById(R.id.lPlus);
         Button dMinus = findViewById(R.id.wMinus);
@@ -84,15 +87,19 @@ public class WoodFrame extends AppCompatActivity {
         });
     }
 
-    // validation
+    /**
+     * Validate the user input
+     * @param strNum - user input
+     * @return - true if the input is a positive number
+     */
     private boolean notANumInRange(String strNum){
         if (strNum == null) {
-            return true;//validate num is not null
+            return true;    //validate num is not null
         }
         try {
-            double d = Double.parseDouble(strNum);//validate string is a num
+            double d = Double.parseDouble(strNum);  //validate string is a num
             if(d<0){
-                return true;//validate num cant be minus
+                return true;    //validate num cant be minus
             }
         } catch (NumberFormatException nfe) {
             return true;
@@ -100,11 +107,20 @@ public class WoodFrame extends AppCompatActivity {
         return false;
     }
 
+    /**
+     * Increment the number
+     * @param textView - the textView that should be incremented
+     */
     @SuppressLint("SetTextI18n")
     private void incrementNum(TextView textView){
         double newNum=Double.parseDouble(textView.getText().toString())+1;
         textView.setText(Double.toString(newNum));
     }
+
+    /**
+     * Decrement the number
+     * @param textView - the textView that should be decremented
+     */
     @SuppressLint("SetTextI18n")
     private void decrementNum(TextView textView){
         double newNum=Double.parseDouble(textView.getText().toString())-1;
