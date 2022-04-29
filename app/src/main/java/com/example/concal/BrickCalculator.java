@@ -1,5 +1,6 @@
 package com.example.concal;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -19,6 +20,10 @@ import java.util.List;
 
 public class BrickCalculator extends AppCompatActivity {
 
+    TextView out;
+    TextView cementOut;
+    TextView sandOut;
+
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +37,12 @@ public class BrickCalculator extends AppCompatActivity {
         EditText bWidth = findViewById(R.id.tWidth);
         EditText bHeight = findViewById(R.id.bHeight);
 
+        out = findViewById(R.id.cementOut);
+        cementOut = findViewById(R.id.sandOut);
+        sandOut = findViewById(R.id.solarCount);
+
+        Button submit = findViewById(R.id.submit);
+
         List<String> thicknessList = Arrays.asList("10cm wall", "23cm wall");
         Spinner thicknessSpinner = findViewById(R.id.memberType);
         ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_item, thicknessList);
@@ -44,11 +55,11 @@ public class BrickCalculator extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ratioSpinner.setAdapter(adapter2);
 
-        TextView out = findViewById(R.id.cementOut);
-        TextView cementOut = findViewById(R.id.sandOut);
-        TextView sandOut = findViewById(R.id.solarCount);
-
-        Button submit = findViewById(R.id.submit);
+        if(savedInstanceState!=null){   //recovering the variables
+            out.setText(savedInstanceState.getString("brickCount"));
+            cementOut.setText(savedInstanceState.getString("cementBags"));
+            sandOut.setText(savedInstanceState.getString("sand"));
+        }
 
         submit.setOnClickListener(v -> {
 
@@ -230,5 +241,29 @@ public class BrickCalculator extends AppCompatActivity {
     private void decrementNum(TextView textView){
         double newNum=Double.parseDouble(textView.getText().toString())-1.0;
         textView.setText(Double.toString(newNum));
+    }
+
+    /**
+     * save the state of the activity
+     * @param outState - bundle to save the state
+     */
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("brickCount",out.getText().toString());
+        outState.putString("cementBags",cementOut.getText().toString());
+        outState.putString("sand",sandOut.getText().toString());
+    }
+
+    /**
+     * restore the state of the activity
+     * @param savedInstanceState - bundle to restore the state
+     */
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        savedInstanceState.getString("brickCount");
+        savedInstanceState.getString("cementBags");
+        savedInstanceState.getString("sand");
     }
 }
