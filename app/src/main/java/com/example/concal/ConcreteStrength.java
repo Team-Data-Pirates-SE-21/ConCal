@@ -42,6 +42,7 @@ public class ConcreteStrength extends AppCompatActivity {
         EditText input6=findViewById(R.id.editTextInput6);
         EditText input7=findViewById(R.id.editTextInput7);
         EditText input8=findViewById(R.id.editTextInput8);
+        TextView outputDefault=findViewById(R.id.txtAnswer2);
 
         // Initializing the '+' and '-' buttons of the activity
         Button minCement=findViewById(R.id.minCement);
@@ -61,7 +62,6 @@ public class ConcreteStrength extends AppCompatActivity {
         Button minAge=findViewById(R.id.minAge);
         Button maxAge=findViewById(R.id.maxAge);
 
-        TextView outputDefault=findViewById(R.id.txtAnswer2);
         String defaultDay="28"; // Default day(To predict the 28th day strength)
 
         LoadingDialog loadingDialog=new LoadingDialog(ConcreteStrength.this); // Initializing the loading dialog
@@ -167,11 +167,10 @@ public class ConcreteStrength extends AppCompatActivity {
     }
 
     /**
-     *
-     * @param strNum
-     * @return
+     * Checking the user input in range
+     * @param strNum - user input
+     * @return - true if the input is in range
      */
-    // Checking the user input in range
     private boolean notANumInRange(String strNum){
         if (strNum == null) {   //validate num is not null
             return true;
@@ -188,8 +187,8 @@ public class ConcreteStrength extends AppCompatActivity {
     }
 
     /**
-     *
-     * @param textView
+     * Increment the text field value
+     * @param textView - text view to be incremented
      */
     @SuppressLint("SetTextI18n")
     private void incrementNum(TextView textView){
@@ -198,8 +197,8 @@ public class ConcreteStrength extends AppCompatActivity {
     }
 
     /**
-     *
-     * @param textView
+     * Decrement the text field value
+     * @param textView - text view to be decremented
      */
     @SuppressLint("SetTextI18n")
     private void decrementNum(TextView textView){
