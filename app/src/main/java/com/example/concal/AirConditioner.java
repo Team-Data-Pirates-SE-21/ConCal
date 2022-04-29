@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+// Class of air conditioner size calculator
 public class AirConditioner extends AppCompatActivity {
 
     TextView acSizeText;
@@ -38,6 +39,7 @@ public class AirConditioner extends AppCompatActivity {
 
         submit.setOnClickListener(v -> {
 
+            // Validate the user input
             if (rLength.getText().toString().equals("0.0") || rBreadth.getText().toString().equals("0.0") || rHeight.getText().toString().equals("0.0") || pCount.getText().toString().equals("0") || maxTemp.getText().toString().equals("0")) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Please fill the empty fields", Toast.LENGTH_LONG);
                 toast.show();
@@ -47,6 +49,7 @@ public class AirConditioner extends AppCompatActivity {
                 Toast toast = Toast.makeText(getApplicationContext(), "All inputs should be positive", Toast.LENGTH_LONG);
                 toast.show();
                 acSizeText.setText("Error!");
+
             } else {
                 final String tempLength = rLength.getText().toString();
                 final String tempBreadth = rBreadth.getText().toString();
@@ -91,6 +94,7 @@ public class AirConditioner extends AppCompatActivity {
             }
         });
 
+        // Initialize the '+', '-' buttons
         Button lMinus = findViewById(R.id.lm);
         Button lPlus = findViewById(R.id.lu);
         Button bMinus = findViewById(R.id.bm);
@@ -102,6 +106,7 @@ public class AirConditioner extends AppCompatActivity {
         Button tMinus = findViewById(R.id.tm);
         Button tPlus = findViewById(R.id.tu);
 
+        // set the onClickListener for the '+', '-' buttons
         lMinus.setOnClickListener(view -> decrementNum(rLength));
         lPlus.setOnClickListener(view -> incrementNum(rLength));
 
@@ -126,7 +131,7 @@ public class AirConditioner extends AppCompatActivity {
     }
 
     /**
-     * Vakidating the user input
+     * Validating the user input
      * @param strNum - user input
      * @return - true if the input is valid
      */
