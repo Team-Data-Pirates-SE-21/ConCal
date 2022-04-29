@@ -1,18 +1,22 @@
 package com.example.concal;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+// Class for the Flooring calculator option
 public class Flooring extends AppCompatActivity {
+
+    TextView result1;
+    TextView result2;
+    TextView result3;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -20,6 +24,7 @@ public class Flooring extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flooring);
 
+        // Initialize the elements
         EditText length = findViewById(R.id.len);
         EditText width = findViewById(R.id.units);
 
@@ -28,12 +33,19 @@ public class Flooring extends AppCompatActivity {
 
         Button submit = findViewById(R.id.submit);
 
-        TextView result1 = findViewById(R.id.cementOut);
-        TextView result2 = findViewById(R.id.sandOut);
-        TextView result3 = findViewById(R.id.solarCount);
+        result1 = findViewById(R.id.cementOut);
+        result2 = findViewById(R.id.sandOut);
+        result3 = findViewById(R.id.solarCount);
+
+        if(savedInstanceState!=null){   //recovering the variables
+            result1.setText(savedInstanceState.getString("tiles"));
+            result2.setText(savedInstanceState.getString("cement"));
+            result3.setText(savedInstanceState.getString("sand"));
+        }
 
         submit.setOnClickListener(v -> {
 
+            // Validate the inputs
             if (length.getText().toString().equals("0.0") || width.getText().toString().equals("0.0") || tLength.getText().toString().equals("0.0") || tWidth.getText().toString().equals("0.0")) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Please fill the empty fields", Toast.LENGTH_LONG);
                 toast.show();
@@ -75,59 +87,40 @@ public class Flooring extends AppCompatActivity {
             }
         });
 
+        // Initialize the '+', '-' buttons
         Button lMinus = findViewById(R.id.lengthMinus);
         Button lPlus = findViewById(R.id.lengthPlus);
         Button wMinus = findViewById(R.id.quantityMinus);
         Button wPlus = findViewById(R.id.quantityPlus);
 
-        lMinus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                decrementNum(length);
-            }
-        });
+        // Set the '+', '-' buttons
+        lMinus.setOnClickListener(v -> decrementNum(length));
+        lPlus.setOnClickListener(v -> incrementNum(length));
 
-        lPlus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                incrementNum(length);
-            }
-        });
-
-        wMinus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                decrementNum(width);
-            }
-        });
-
-        wPlus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                incrementNum(width);
-            }
-        });
+        wMinus.setOnClickListener(v -> decrementNum(width));
+        wPlus.setOnClickListener(v -> incrementNum(width));
 
         //backButton
         ImageButton back=findViewById(R.id.imageButton);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(i);
-            }
+        back.setOnClickListener(view -> {
+            Intent i=new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(i);
         });
     }
 
-    // validation
+    /**
+     * Validate the user input
+     * @param strNum - the user input
+     * @return - true if the input is a positive number
+     */
     private boolean notANumInRange(String strNum){
         if (strNum == null) {
-            return true;//validate num is not null
+            return true;    //validate num is not null
         }
         try {
-            double d = Double.parseDouble(strNum);//validate string is a num
+            double d = Double.parseDouble(strNum);  //validate string is a num
             if(d<0){
-                return true;//validate num cant be minus
+                return true;    //validate num cant be minus
             }
         } catch (NumberFormatException nfe) {
             return true;
@@ -135,14 +128,47 @@ public class Flooring extends AppCompatActivity {
         return false;
     }
 
+    /**
+     * Increment the number in the text field
+     * @param textView - the text field to be incremented
+     */
     @SuppressLint("SetTextI18n")
     private void incrementNum(TextView textView){
         double newNum=Double.parseDouble(textView.getText().toString())+1;
         textView.setText(Double.toString(newNum));
     }
+
+    /**
+     * Decrement the number in the text field
+     * @param textView - the text field to be decremented
+     */
     @SuppressLint("SetTextI18n")
     private void decrementNum(TextView textView){
         double newNum=Double.parseDouble(textView.getText().toString())-1;
         textView.setText(Double.toString(newNum));
+    }
+
+    /**
+     * save the state of the activity
+     * @param outState - bundle to save the state
+     */
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("tiles",result1.getText().toString());
+        outState.putString("cement",result2.getText().toString());
+        outState.putString("sand",result3.getText().toString());
+    }
+
+    /**
+     * restore the state of the activity
+     * @param savedInstanceState - bundle to restore the state
+     */
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        savedInstanceState.getString("tiles");
+        savedInstanceState.getString("cement");
+        savedInstanceState.getString("sand");
     }
 }

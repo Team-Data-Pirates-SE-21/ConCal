@@ -1,5 +1,6 @@
 package com.example.concal;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -17,7 +18,12 @@ import android.widget.Toast;
 import java.util.Arrays;
 import java.util.List;
 
+// Class of brick calculator option
 public class BrickCalculator extends AppCompatActivity {
+
+    TextView out;
+    TextView cementOut;
+    TextView sandOut;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -25,6 +31,7 @@ public class BrickCalculator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_brick_calculator);
 
+        // Initializing the elements
         EditText length = findViewById(R.id.len);
         EditText height = findViewById(R.id.units);
 
@@ -32,26 +39,35 @@ public class BrickCalculator extends AppCompatActivity {
         EditText bWidth = findViewById(R.id.tWidth);
         EditText bHeight = findViewById(R.id.bHeight);
 
+        out = findViewById(R.id.cementOut);
+        cementOut = findViewById(R.id.sandOut);
+        sandOut = findViewById(R.id.solarCount);
+
+        Button submit = findViewById(R.id.submit);
+
+        // Thickness selector
         List<String> thicknessList = Arrays.asList("10cm wall", "23cm wall");
         Spinner thicknessSpinner = findViewById(R.id.memberType);
         ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_item, thicknessList);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         thicknessSpinner.setAdapter(adapter);
 
+        // Ratio selector
         List<String> ratioList = Arrays.asList("C.M 1:3", "C.M 1:4", "C.M 1:5", "C.M 1:6", "C.M 1:7", "C.M 1:8", "C.M 1:9");
         Spinner ratioSpinner = findViewById(R.id.ratioSpinner);
         ArrayAdapter adapter2 = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_item, ratioList);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ratioSpinner.setAdapter(adapter2);
 
-        TextView out = findViewById(R.id.cementOut);
-        TextView cementOut = findViewById(R.id.sandOut);
-        TextView sandOut = findViewById(R.id.solarCount);
-
-        Button submit = findViewById(R.id.submit);
+        if(savedInstanceState!=null){   //recovering the variables
+            out.setText(savedInstanceState.getString("brickCount"));
+            cementOut.setText(savedInstanceState.getString("cementBags"));
+            sandOut.setText(savedInstanceState.getString("sand"));
+        }
 
         submit.setOnClickListener(v -> {
 
+            // Validating the user inputs
             if (length.getText().toString().equals("0.0") || height.getText().toString().equals("0.0") || bLength.getText().toString().equals("0.0") || bWidth.getText().toString().equals("0.0") || bHeight.getText().toString().equals("0.0")) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Please fill the empty fields", Toast.LENGTH_LONG);
                 toast.show();
@@ -65,8 +81,10 @@ public class BrickCalculator extends AppCompatActivity {
                 out.setText("Error!");
                 cementOut.setText("Error!");
                 sandOut.setText("Error!");
+
             } else {
-                //NUMBER OF Bricks counter
+                // NUMBER OF Bricks counter
+
                 double wallThickness;
                 String tempLength = length.getText().toString();
                 String tempWidth = height.getText().toString();
@@ -182,6 +200,7 @@ public class BrickCalculator extends AppCompatActivity {
             }
         });
 
+        // Initialize the '+', '-' buttons
         Button lMinus = findViewById(R.id.lengthMinus);
         Button lPlus = findViewById(R.id.lengthPlus);
         Button hMinus = findViewById(R.id.quantityMinus);
@@ -196,16 +215,17 @@ public class BrickCalculator extends AppCompatActivity {
 
         //backButton
         ImageButton back=findViewById(R.id.imageButton);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(i);
-            }
+        back.setOnClickListener(view -> {
+            Intent i=new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(i);
         });
     }
 
-    // validation
+    /**
+     * Validating the user input
+     * @param strNum - the user input
+     * @return - true if the input is valid
+     */
     private boolean notANumInRange(String strNum){
         if (strNum == null) {
             return true;//validate num is not null
@@ -221,14 +241,47 @@ public class BrickCalculator extends AppCompatActivity {
         return false;
     }
 
+    /**
+     * Increasing the value of the textView
+     * @param textView - the textView to be incremented
+     */
     @SuppressLint("SetTextI18n")
     private void incrementNum(TextView textView){
         double newNum=Double.parseDouble(textView.getText().toString())+1.0;
         textView.setText(Double.toString(newNum));
     }
+
+    /**
+     * Decreasing the value of the textView
+     * @param textView -  the textView to be decremented
+     */
     @SuppressLint("SetTextI18n")
     private void decrementNum(TextView textView){
         double newNum=Double.parseDouble(textView.getText().toString())-1.0;
         textView.setText(Double.toString(newNum));
+    }
+
+    /**
+     * save the state of the activity
+     * @param outState - bundle to save the state
+     */
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("brickCount",out.getText().toString());
+        outState.putString("cementBags",cementOut.getText().toString());
+        outState.putString("sand",sandOut.getText().toString());
+    }
+
+    /**
+     * restore the state of the activity
+     * @param savedInstanceState - bundle to restore the state
+     */
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        savedInstanceState.getString("brickCount");
+        savedInstanceState.getString("cementBags");
+        savedInstanceState.getString("sand");
     }
 }

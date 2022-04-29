@@ -1,18 +1,20 @@
 package com.example.concal;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+// Class of air conditioner size calculator
 public class AirConditioner extends AppCompatActivity {
+
+    TextView acSizeText;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -20,18 +22,24 @@ public class AirConditioner extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_air_conditioner);
 
+        // Initialize the elements
         EditText rLength = findViewById(R.id.rLength);
         EditText rBreadth = findViewById(R.id.rBreadth);
         EditText rHeight = findViewById(R.id.rHeight);
         EditText pCount = findViewById(R.id.personCount);
         EditText maxTemp = findViewById(R.id.maxTemp);
 
-        TextView acSizeText = findViewById(R.id.output);
+        acSizeText = findViewById(R.id.output);
 
         Button submit = findViewById(R.id.calculate);
 
+        if(savedInstanceState!=null){   //recovering the variables
+            acSizeText.setText(savedInstanceState.getString("acSize"));
+        }
+
         submit.setOnClickListener(v -> {
 
+            // Validate the user input
             if (rLength.getText().toString().equals("0.0") || rBreadth.getText().toString().equals("0.0") || rHeight.getText().toString().equals("0.0") || pCount.getText().toString().equals("0") || maxTemp.getText().toString().equals("0")) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Please fill the empty fields", Toast.LENGTH_LONG);
                 toast.show();
@@ -41,6 +49,7 @@ public class AirConditioner extends AppCompatActivity {
                 Toast toast = Toast.makeText(getApplicationContext(), "All inputs should be positive", Toast.LENGTH_LONG);
                 toast.show();
                 acSizeText.setText("Error!");
+
             } else {
                 final String tempLength = rLength.getText().toString();
                 final String tempBreadth = rBreadth.getText().toString();
@@ -85,6 +94,7 @@ public class AirConditioner extends AppCompatActivity {
             }
         });
 
+        // Initialize the '+', '-' buttons
         Button lMinus = findViewById(R.id.lm);
         Button lPlus = findViewById(R.id.lu);
         Button bMinus = findViewById(R.id.bm);
@@ -96,6 +106,7 @@ public class AirConditioner extends AppCompatActivity {
         Button tMinus = findViewById(R.id.tm);
         Button tPlus = findViewById(R.id.tu);
 
+        // set the onClickListener for the '+', '-' buttons
         lMinus.setOnClickListener(view -> decrementNum(rLength));
         lPlus.setOnClickListener(view -> incrementNum(rLength));
 
@@ -113,24 +124,25 @@ public class AirConditioner extends AppCompatActivity {
 
         //backButton
         ImageButton back=findViewById(R.id.imageButton);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(i);
-            }
+        back.setOnClickListener(view -> {
+            Intent i=new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(i);
         });
     }
 
-    // validation
+    /**
+     * Validating the user input
+     * @param strNum - user input
+     * @return - true if the input is valid
+     */
     private boolean notANumInRange(String strNum){
         if (strNum == null) {
-            return true;//validate num is not null
+            return true;    //validate num is not null
         }
         try {
-            double d = Double.parseDouble(strNum);//validate string is a num
+            double d = Double.parseDouble(strNum);  //validate string is a num
             if(d<0){
-                return true;//validate num cant be minus
+                return true;    //validate num cant be minus
             }
         } catch (NumberFormatException nfe) {
             return true;
@@ -138,25 +150,63 @@ public class AirConditioner extends AppCompatActivity {
         return false;
     }
 
+    /**
+     * increment the number in the text view
+     * @param textView - the text view to be incremented
+     */
     @SuppressLint("SetTextI18n")
     private void incrementNum(TextView textView){
         double newNum=Double.parseDouble(textView.getText().toString())+1;
         textView.setText(Double.toString(newNum));
     }
+
+    /**
+     * Decrement the number in the text view
+     * @param textView - the text view to decrement
+     */
     @SuppressLint("SetTextI18n")
     private void decrementNum(TextView textView){
         double newNum=Double.parseDouble(textView.getText().toString())-1;
         textView.setText(Double.toString(newNum));
     }
 
+    /**
+     * Increment the number of people
+     * @param textView - textView to be incremented
+     */
     @SuppressLint("SetTextI18n")
     private void incrementPNum(TextView textView){
         int newNum = (int)Double.parseDouble(textView.getText().toString())+1;
         textView.setText(Integer.toString(newNum));
     }
+
+    /**
+     * Decrement the number of people
+     * @param textView - the text view to decrement
+     */
     @SuppressLint("SetTextI18n")
     private void decrementPNum(TextView textView){
         int newNum = (int)Double.parseDouble(textView.getText().toString())-1;
         textView.setText(Integer.toString(newNum));
+    }
+
+    /**
+     * save the state of the activity
+     * @param outState - bundle to save the state
+     */
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("acSize",acSizeText.getText().toString());
+    }
+
+    /**
+     * restore the state of the activity
+     * @param savedInstanceState - bundle to restore the state
+     */
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        savedInstanceState.getString("acSize");
     }
 }

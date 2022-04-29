@@ -2,11 +2,9 @@ package com.example.concal;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,10 +12,10 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.Arrays;
 import java.util.List;
 
+// Class of Solar rooftop calculator option
 public class SolarRooftop extends AppCompatActivity {
 
     TextView panelCount ;
@@ -31,33 +29,33 @@ public class SolarRooftop extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_solar_rooftop);
 
+        // Initialize the elements
         Button submit = findViewById(R.id.submit);
+
+        EditText units = findViewById(R.id.units);
 
         panelCount = findViewById(R.id.solarCount);
         system = findViewById(R.id.systemOut);
         dailyUnits = findViewById(R.id.dailyUnit);
         rooftopArea = findViewById(R.id.rooftopArea);
 
+        // Initialize the spinner
         List<String> consumptionTypes = Arrays.asList("Monthly", "Yearly");
         Spinner consumptionType = findViewById(R.id.memberType);
         ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_item, consumptionTypes);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         consumptionType.setAdapter(adapter);
 
-        EditText units = findViewById(R.id.units);
-
-
-        if(savedInstanceState!=null){//recover the variables
+        if(savedInstanceState!=null){   //recover the variables
             panelCount.setText(savedInstanceState.getString("panelCount"));
             system.setText(savedInstanceState.getString("system"));
             dailyUnits.setText(savedInstanceState.getString("dailyUnits"));
             rooftopArea.setText(savedInstanceState.getString("rooftopArea"));
-
-
         }
 
         submit.setOnClickListener(view -> {
 
+            // Validate the input
             if (units.getText().toString().equals("0") || units.getText().toString().equals("0.0")) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Please check the number of units.", Toast.LENGTH_LONG);
                 toast.show();
@@ -96,31 +94,34 @@ public class SolarRooftop extends AppCompatActivity {
 
                 double areaRequired = Math.round((rooftopCapacity * 95) * 100.0) / 100.0;
 
-                panelCount.setText(panelNo + " Panels");;
+                panelCount.setText(panelNo + " Panels");
                 system.setText(rooftopCapacity + " Kw");
                 dailyUnits.setText(dailyConsumption + " units/day");
                 rooftopArea.setText(areaRequired + " sq.m");
             }
         });
 
+        // Initialize the '+', '-' buttons
         Button qMinus = findViewById(R.id.quantityMinus);
         Button qPlus = findViewById(R.id.quantityPlus);
 
+        // Set the '+', '-' buttons onClickListeners
         qMinus.setOnClickListener(view -> decrementNum(units));
         qPlus.setOnClickListener(view -> incrementNum(units));
 
         //backButton
         ImageButton back=findViewById(R.id.imageButton);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(i);
-            }
+        back.setOnClickListener(view -> {
+            Intent i=new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(i);
         });
     }
 
-    // validation
+    /**
+     * Validate the input
+     * @param strNum - the user input
+     * @return - true if the input is a positive number
+     */
     private boolean notANumInRange(String strNum){
         if (strNum == null) {
             return true;//validate num is not null
@@ -136,17 +137,30 @@ public class SolarRooftop extends AppCompatActivity {
         return false;
     }
 
+    /**
+     * Increment the number in the EditText
+     * @param textView - the textView to be incremented
+     */
     @SuppressLint("SetTextI18n")
     private void incrementNum(TextView textView){
         double newNum=Double.parseDouble(textView.getText().toString())+1;
         textView.setText(Double.toString(newNum));
     }
+
+    /**
+     * Decrement the number in the EditText
+     * @param textView - the textView to be decremented
+     */
     @SuppressLint("SetTextI18n")
     private void decrementNum(TextView textView){
         double newNum=Double.parseDouble(textView.getText().toString())-1;
         textView.setText(Double.toString(newNum));
     }
 
+    /**
+     * Save the values to SharedPreferences
+     * @param outState - the bundle to be saved
+     */
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -156,6 +170,10 @@ public class SolarRooftop extends AppCompatActivity {
         outState.putString("rooftopArea",rooftopArea.getText().toString());
     }
 
+    /**
+     * Restore the values from SharedPreferences
+     * @param savedInstanceState - the bundle to be restored
+     */
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
