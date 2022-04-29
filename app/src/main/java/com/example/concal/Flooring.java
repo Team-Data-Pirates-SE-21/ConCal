@@ -1,5 +1,6 @@
 package com.example.concal;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -12,6 +13,10 @@ import android.widget.Toast;
 
 // Class for the Flooring calculator option
 public class Flooring extends AppCompatActivity {
+
+    TextView result1;
+    TextView result2;
+    TextView result3;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -28,9 +33,15 @@ public class Flooring extends AppCompatActivity {
 
         Button submit = findViewById(R.id.submit);
 
-        TextView result1 = findViewById(R.id.cementOut);
-        TextView result2 = findViewById(R.id.sandOut);
-        TextView result3 = findViewById(R.id.solarCount);
+        result1 = findViewById(R.id.cementOut);
+        result2 = findViewById(R.id.sandOut);
+        result3 = findViewById(R.id.solarCount);
+
+        if(savedInstanceState!=null){   //recovering the variables
+            result1.setText(savedInstanceState.getString("tiles"));
+            result2.setText(savedInstanceState.getString("cement"));
+            result3.setText(savedInstanceState.getString("sand"));
+        }
 
         submit.setOnClickListener(v -> {
 
@@ -135,5 +146,29 @@ public class Flooring extends AppCompatActivity {
     private void decrementNum(TextView textView){
         double newNum=Double.parseDouble(textView.getText().toString())-1;
         textView.setText(Double.toString(newNum));
+    }
+
+    /**
+     * save the state of the activity
+     * @param outState - bundle to save the state
+     */
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("tiles",result1.getText().toString());
+        outState.putString("cement",result2.getText().toString());
+        outState.putString("sand",result3.getText().toString());
+    }
+
+    /**
+     * restore the state of the activity
+     * @param savedInstanceState - bundle to restore the state
+     */
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        savedInstanceState.getString("tiles");
+        savedInstanceState.getString("cement");
+        savedInstanceState.getString("sand");
     }
 }
