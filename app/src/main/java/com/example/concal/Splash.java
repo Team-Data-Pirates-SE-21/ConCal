@@ -15,12 +15,9 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         // After delay of 3 seconds, go to the home screen
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent i=new Intent(Splash.this,MainActivity.class);
-                startActivity(i);
-                finish();
-            }
+        new Handler().postDelayed(() -> {
+            Intent i=new Intent(Splash.this,MainActivity.class);
+            startActivity(i);
+            finish();
         },3000);
 }}
