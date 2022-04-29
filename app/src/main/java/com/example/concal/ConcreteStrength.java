@@ -1,5 +1,6 @@
 package com.example.concal;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -24,16 +25,24 @@ import java.util.Map;
 // Concrete strength predictor option class
 public class ConcreteStrength extends AppCompatActivity {
 
+    TextView output;
+    TextView outputDefault;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_concrete_strength);
 
+        if(savedInstanceState!=null){   //recovering the variables
+            output.setText(savedInstanceState.getString("strength"));
+            outputDefault.setText(savedInstanceState.getString("strengthDefault"));
+        }
+
         String url="https://concal-backend-dp.herokuapp.com/";  //url of the server
 
         // Initializing the elements of the activity
         Button btn=findViewById(R.id.btnPredict);
-        TextView output=findViewById(R.id.txtAnswer);
+        output=findViewById(R.id.txtAnswer);
         EditText input1=findViewById(R.id.editTextInput);
         EditText input2=findViewById(R.id.editTextInput2);
         EditText input3=findViewById(R.id.editTextInput3);
@@ -42,7 +51,7 @@ public class ConcreteStrength extends AppCompatActivity {
         EditText input6=findViewById(R.id.editTextInput6);
         EditText input7=findViewById(R.id.editTextInput7);
         EditText input8=findViewById(R.id.editTextInput8);
-        TextView outputDefault=findViewById(R.id.txtAnswer2);
+        outputDefault=findViewById(R.id.txtAnswer2);
 
         // Initializing the '+' and '-' buttons of the activity
         Button minCement=findViewById(R.id.minCement);
@@ -204,5 +213,27 @@ public class ConcreteStrength extends AppCompatActivity {
     private void decrementNum(TextView textView){
         double newNum=Double.parseDouble(textView.getText().toString())-1;
         textView.setText(Double.toString(newNum));
+    }
+
+    /**
+     * save the state of the activity
+     * @param outState - bundle to save the state
+     */
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("strength",output.getText().toString());
+        outState.putString("strengthDefault",outputDefault.getText().toString());
+    }
+
+    /**
+     * restore the state of the activity
+     * @param savedInstanceState - bundle to restore the state
+     */
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        savedInstanceState.getString("strength");
+        savedInstanceState.getString("strengthDefault");
     }
 }
