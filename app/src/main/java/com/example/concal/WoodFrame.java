@@ -1,11 +1,11 @@
 package com.example.concal;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -13,6 +13,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class WoodFrame extends AppCompatActivity {
+
+    TextView result;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -24,9 +26,13 @@ public class WoodFrame extends AppCompatActivity {
         EditText depth = findViewById(R.id.wWidth);
         EditText thickness = findViewById(R.id.fThickness);
 
-        TextView result = findViewById(R.id.capacity);
+        result = findViewById(R.id.capacity);
 
         Button calculate = findViewById(R.id.cal);
+
+        if(savedInstanceState!=null){   //recovering the variables
+            result.setText(savedInstanceState.getString("output"));
+        }
 
         calculate.setOnClickListener(v -> {
 
@@ -70,15 +76,11 @@ public class WoodFrame extends AppCompatActivity {
         tMinus.setOnClickListener(view -> decrementNum(thickness));
         tPlus.setOnClickListener(view -> incrementNum(thickness));
 
-
         //backButton
         ImageButton back=findViewById(R.id.imageButton);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(i);
-            }
+        back.setOnClickListener(view -> {
+            Intent i=new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(i);
         });
     }
 
@@ -107,5 +109,25 @@ public class WoodFrame extends AppCompatActivity {
     private void decrementNum(TextView textView){
         double newNum=Double.parseDouble(textView.getText().toString())-1;
         textView.setText(Double.toString(newNum));
+    }
+
+    /**
+     * save the state of the activity
+     * @param outState - bundle to save the state
+     */
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("output",result.getText().toString());
+    }
+
+    /**
+     * restore the state of the activity
+     * @param savedInstanceState - bundle to restore the state
+     */
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        savedInstanceState.getString("output");
     }
 }
