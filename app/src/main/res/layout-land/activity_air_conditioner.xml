@@ -10,11 +10,11 @@
 
     <Button
         android:id="@+id/lu"
-        android:layout_width="45dp"
+        android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="+"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.959"
@@ -25,11 +25,11 @@
 
     <Button
         android:id="@+id/tu"
-        android:layout_width="45dp"
+        android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="+"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.959"
@@ -39,11 +39,11 @@
 
     <Button
         android:id="@+id/pu"
-        android:layout_width="45dp"
+        android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="+"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.959"
@@ -53,11 +53,11 @@
 
     <Button
         android:id="@+id/hu"
-        android:layout_width="45dp"
+        android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="+"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.959"
@@ -67,11 +67,11 @@
 
     <Button
         android:id="@+id/bu"
-        android:layout_width="45dp"
+        android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="+"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.957"
@@ -81,11 +81,11 @@
 
     <Button
         android:id="@+id/lm"
-        android:layout_width="45dp"
+        android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="-"
-        android:textSize="20sp"
+        android:textSize="214sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.542"
@@ -95,11 +95,11 @@
 
     <Button
         android:id="@+id/bm"
-        android:layout_width="45dp"
+        android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="-"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.542"
@@ -109,11 +109,11 @@
 
     <Button
         android:id="@+id/tm"
-        android:layout_width="45dp"
+        android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="-"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.542"
@@ -123,11 +123,11 @@
 
     <Button
         android:id="@+id/pm"
-        android:layout_width="45dp"
+        android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="-"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.542"
@@ -137,11 +137,11 @@
 
     <Button
         android:id="@+id/hm"
-        android:layout_width="45dp"
+        android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="-"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.542"
