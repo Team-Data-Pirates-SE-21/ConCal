@@ -30,10 +30,10 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintHorizontal_bias="0.956"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.151" />
+        app:layout_constraintVertical_bias="0.15" />
 
     <Button
         android:id="@+id/quantityMinus"
@@ -43,11 +43,11 @@
         android:text="@string/min"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/quantityPlus"
-        app:layout_constraintHorizontal_bias="0.574"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.152" />
+        app:layout_constraintVertical_bias="0.15" />
 
     <TextView
         android:id="@+id/width"
@@ -81,13 +81,15 @@
 
     <EditText
         android:id="@+id/width2"
-        android:layout_width="106dp"
+        android:layout_width="100dp"
         android:layout_height="44dp"
+        android:autofillHints="concrete quantity"
+        android:background="@android:color/transparent"
         android:ems="10"
+        android:gravity="center"
         android:hint="Wall Height in cm"
         android:inputType="textPersonName"
         android:text="0"
-        android:gravity="center"
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -96,9 +98,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.151"
-        android:autofillHints="concrete quantity"
-        tools:ignore="HardcodedText"
-        android:background="@android:color/transparent"/>
+        tools:ignore="HardcodedText" />
 
     <Spinner
         android:id="@+id/memberType"
@@ -204,8 +204,8 @@
         android:id="@+id/textView33"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="Enter input in cubic meters."
+        android:fontFamily="serif"
+        android:text="*Enter input in cubic meters."
         android:textColor="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
