@@ -55,10 +55,10 @@ ratio for the first floor of a store building, it will not be strengthened enoug
 factor, if the constructor uses the same ratio for a house that is not using more weighted items in
 their building, it can be more costly.
 
-<h2>Technologies<h2>
+<h2>Technologies</h2>
 
 <ul>
-<li>Python/li>
+<li>Python</li>
 <li>Java</li>
 <li>Heroku</li>
 </ul>
