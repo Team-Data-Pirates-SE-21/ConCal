@@ -1,7 +1,7 @@
 # ConCal
 ConCal project of SE-21 IIT.
 
-<u>Members</u>
+<h4>Members</h4>
   * Chamoda De Silva
   * Janith Chanaka
   * Nethmini Weerakon
