@@ -89,7 +89,7 @@
         app:layout_constraintHorizontal_bias="0.94"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.159" />
+        app:layout_constraintVertical_bias="0.151" />
 
     <Button
         android:id="@+id/wPlus"
@@ -103,7 +103,7 @@
         app:layout_constraintHorizontal_bias="0.94"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.248" />
+        app:layout_constraintVertical_bias="0.247" />
 
     <Button
         android:id="@+id/dPlus"
@@ -121,7 +121,7 @@
 
     <Button
         android:id="@+id/wMinus"
-        android:layout_width="37dp"
+        android:layout_width="44dp"
         android:layout_height="44dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="-"
@@ -135,7 +135,7 @@
 
     <Button
         android:id="@+id/dMinus"
-        android:layout_width="37dp"
+        android:layout_width="44dp"
         android:layout_height="44dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="-"
@@ -149,7 +149,7 @@
 
     <Button
         android:id="@+id/lMinus"
-        android:layout_width="37dp"
+        android:layout_width="44dp"
         android:layout_height="44dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="-"
@@ -250,6 +250,7 @@
         android:layout_width="143dp"
         android:layout_height="37dp"
         android:autofillHints="Width in m"
+        android:background="@android:color/transparent"
         android:ems="10"
         android:gravity="center"
         android:hint="Width in m"
@@ -259,12 +260,11 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.742"
+        app:layout_constraintHorizontal_bias="0.753"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.344"
-        tools:ignore="LabelFor,TextFields"
-        android:background="@android:color/transparent"/>
+        app:layout_constraintVertical_bias="0.338"
+        tools:ignore="LabelFor,TextFields" />
 
     <TextView
         android:id="@+id/capacity"
