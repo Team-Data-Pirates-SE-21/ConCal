@@ -135,8 +135,10 @@ public class WaterTank extends AppCompatActivity {
      */
     @SuppressLint("SetTextI18n")
     private void decrementNum(TextView textView){
-        double newNum=Double.parseDouble(textView.getText().toString())-1;
-        textView.setText(Double.toString(newNum));
+        if(Double.parseDouble(textView.getText().toString())>0) {
+            double newNum = Double.parseDouble(textView.getText().toString()) - 1;
+            textView.setText(Double.toString(newNum));
+        }
     }
 
     /**
