@@ -17,62 +17,62 @@
 
         <Button
             android:id="@+id/lengthMinus"
-            android:layout_width="37dp"
+            android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/circlebackgroundbutton"
             android:text="-"
-            android:textSize="20sp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/lengthPlus"
-            app:layout_constraintHorizontal_bias="0.557"
+            app:layout_constraintHorizontal_bias="0.556"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.097"
+            app:layout_constraintVertical_bias="0.121"
             tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/quantityPlus"
-            android:layout_width="44dp"
+            android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/circlebackgroundbutton"
             android:text="+"
-            android:textSize="20sp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.933"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.226"
+            app:layout_constraintVertical_bias="0.242"
             tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/lengthPlus"
-            android:layout_width="44dp"
+            android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/circlebackgroundbutton"
             android:text="+"
-            android:textSize="20sp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.933"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.097"
+            app:layout_constraintVertical_bias="0.121"
             tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/quantityMinus"
-            android:layout_width="37dp"
+            android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/circlebackgroundbutton"
             android:text="-"
-            android:textSize="20sp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/quantityPlus"
-            app:layout_constraintHorizontal_bias="0.557"
+            app:layout_constraintHorizontal_bias="0.555"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.226"
+            app:layout_constraintVertical_bias="0.242"
             tools:ignore="HardcodedText" />
 
         <TextView
