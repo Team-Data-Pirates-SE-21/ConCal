@@ -2,11 +2,13 @@
 ConCal project of SE-21 IIT.
 
 <h4>Members</h4>
- * Chamoda De Silva
- * Janith Chanaka
- * Nethmini Weerakon
- * Hasini Perera
- * Nathan Fernando
+<ol>
+<li>Chamoda De Silva</li>
+<li>Janith Chanaka</li>
+<li>Nethmini Weerakon</li>
+<li> Hasini Perera</li>
+<li>Nathan Fernando</li>
+</ol>
 
 <h2>Introduction</h2>
 This repository contains a mobile application, that very useful for civil engineers ,constructors and other people who are looking for do construction things that they normally needed in their life.
