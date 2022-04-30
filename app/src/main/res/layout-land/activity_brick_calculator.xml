@@ -24,10 +24,10 @@
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/lengthPlus"
-            app:layout_constraintHorizontal_bias="0.555"
+            app:layout_constraintHorizontal_bias="0.642"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.115"
+            app:layout_constraintVertical_bias="0.126"
             tools:ignore="HardcodedText" />
 
         <Button
@@ -39,10 +39,10 @@
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.933"
+            app:layout_constraintHorizontal_bias="0.901"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.242"
+            app:layout_constraintVertical_bias="0.247"
             tools:ignore="HardcodedText" />
 
         <Button
@@ -54,10 +54,10 @@
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.933"
+            app:layout_constraintHorizontal_bias="0.901"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.121"
+            app:layout_constraintVertical_bias="0.126"
             tools:ignore="HardcodedText" />
 
         <Button
@@ -69,10 +69,10 @@
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/quantityPlus"
-            app:layout_constraintHorizontal_bias="0.555"
+            app:layout_constraintHorizontal_bias="0.643"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.242"
+            app:layout_constraintVertical_bias="0.247"
             tools:ignore="HardcodedText" />
 
         <TextView
@@ -167,17 +167,17 @@
 
         <TextView
             android:id="@+id/textView15"
-            android:layout_width="112dp"
-            android:layout_height="32dp"
+            android:layout_width="107dp"
+            android:layout_height="22dp"
             android:fontFamily="sans-serif-black"
             android:text="Brick Length"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.111"
+            app:layout_constraintHorizontal_bias="0.11"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.593"
+            app:layout_constraintVertical_bias="0.578"
             tools:ignore="HardcodedText" />
 
         <TextView
@@ -256,7 +256,6 @@
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:autofillHints=""
-            android:background="@android:color/transparent"
             android:ems="10"
             android:gravity="center"
             android:hint="Brick width in m"
@@ -266,10 +265,10 @@
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.554"
+            app:layout_constraintHorizontal_bias="0.552"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.665"
+            app:layout_constraintVertical_bias="0.692"
             tools:ignore="HardcodedText,TextFields" />
 
         <EditText
@@ -277,7 +276,6 @@
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:autofillHints=""
-            android:background="@android:color/transparent"
             android:ems="10"
             android:gravity="center"
             android:hint="Brick height in m"
@@ -290,7 +288,7 @@
             app:layout_constraintHorizontal_bias="0.947"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.665"
+            app:layout_constraintVertical_bias="0.69"
             tools:ignore="HardcodedText,TextFields" />
 
         <EditText
@@ -497,10 +495,10 @@
             android:background="@android:color/transparent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.785"
+            app:layout_constraintHorizontal_bias="0.782"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.665"
+            app:layout_constraintVertical_bias="0.69"
             app:srcCompat="@drawable/height"
             tools:ignore="ContentDescription" />
 
@@ -536,10 +534,10 @@
             android:layout_height="40dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.412"
+            app:layout_constraintHorizontal_bias="0.409"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.663"
+            app:layout_constraintVertical_bias="0.69"
             app:srcCompat="@drawable/width"
             tools:ignore="ContentDescription" />
 
