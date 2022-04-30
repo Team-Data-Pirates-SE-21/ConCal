@@ -20,4 +20,5 @@
     <string name="plus">+</string>
     <string name="min">-</string>
     <string name="water_tank_capacity_n_tcalculator">Water Tank Capacity\n\tCalculator</string>
+    <string name="logo">Logo</string>
 </resources>
