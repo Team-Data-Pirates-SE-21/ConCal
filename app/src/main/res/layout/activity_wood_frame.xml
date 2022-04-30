@@ -89,7 +89,7 @@
 
     <Button
         android:id="@+id/cal"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:background="@drawable/circlebackgroundbutton"
         android:backgroundTint="@android:color/holo_orange_dark"
@@ -97,18 +97,19 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.262"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.714" />
+        app:layout_constraintVertical_bias="0.9" />
 
     <Button
         android:id="@+id/lPlus"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="@drawable/circlebackgroundbutton"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:text="+"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.956"
@@ -118,12 +119,12 @@
 
     <Button
         android:id="@+id/wPlus"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="@drawable/circlebackgroundbutton"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:text="+"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.956"
@@ -133,12 +134,12 @@
 
     <Button
         android:id="@+id/tPlus"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="@drawable/circlebackgroundbutton"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:text="+"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.956"
@@ -163,12 +164,12 @@
 
     <Button
         android:id="@+id/wMinus"
-        android:layout_width="37dp"
-        android:layout_height="44dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="@drawable/circlebackgroundbutton"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:text="-"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.433"
@@ -178,12 +179,12 @@
 
     <Button
         android:id="@+id/lMinus"
-        android:layout_width="37dp"
-        android:layout_height="44dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="@drawable/circlebackgroundbutton"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:text="-"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.433"
@@ -294,20 +295,6 @@
         tools:ignore="LabelFor" />
 
     <TextView
-        android:id="@+id/capacity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0.0 m^3"
-        android:textColor="@android:color/holo_orange_dark"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.885"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.848" />
-
-    <TextView
         android:id="@+id/textView2"
         android:textColor="@color/black"
         android:layout_width="wrap_content"
@@ -337,31 +324,45 @@
 
     <TextView
         android:id="@+id/textView31"
-        android:fontFamily="sans-serif-black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
         android:text="Enter all the inputs in Meters."
         android:textColor="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.551" />
+        app:layout_constraintVertical_bias="0.512" />
 
     <TextView
         android:id="@+id/textView32"
-        android:fontFamily="sans-serif-black"
-        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
         android:text="Total volume of wood frame"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.146"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.847" />
+        app:layout_constraintVertical_bias="0.761" />
+
+    <TextView
+        android:id="@+id/capacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.0 m^3"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.885"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.761" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
