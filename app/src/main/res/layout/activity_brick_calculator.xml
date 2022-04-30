@@ -9,44 +9,43 @@
 
     <Button
         android:id="@+id/lengthMinus"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="168dp"
+        android:background="@drawable/circlebackgroundbutton"
         android:text="-"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/lengthPlus"
-        app:layout_constraintHorizontal_bias="0.441"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.095"
-        android:background="@drawable/circlebackgroundbutton"
         tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/quantityPlus"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/circlebackgroundbutton"
         android:text="+"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintHorizontal_bias="0.946"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.196"
-        android:background="@drawable/circlebackgroundbutton"
+        app:layout_constraintVertical_bias="0.195"
         tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/lengthPlus"
-        android:layout_width="44dp"
+        android:layout_width="40dp"
         android:layout_height="44dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="+"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.096"
@@ -54,17 +53,16 @@
 
     <Button
         android:id="@+id/quantityMinus"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="168dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="-"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/quantityPlus"
-        app:layout_constraintHorizontal_bias="0.441"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.196"
+        app:layout_constraintVertical_bias="0.195"
         tools:ignore="HardcodedText" />
 
     <TextView
@@ -225,8 +223,8 @@
 
     <EditText
         android:id="@+id/tLength"
-        android:layout_width="103dp"
-        android:layout_height="45dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
         android:autofillHints=""
         android:ems="10"
         android:gravity="center"
@@ -245,8 +243,8 @@
 
     <EditText
         android:id="@+id/tWidth"
-        android:layout_width="115dp"
-        android:layout_height="43dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
         android:autofillHints=""
         android:ems="10"
         android:gravity="center"
@@ -261,13 +259,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.683"
-        tools:ignore="HardcodedText,TextFields"
-        android:background="@android:color/transparent"/>
+        tools:ignore="HardcodedText,TextFields" />
 
     <EditText
         android:id="@+id/bHeight"
-        android:layout_width="139dp"
-        android:layout_height="47dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
         android:autofillHints=""
         android:ems="10"
         android:gravity="center"
@@ -278,12 +275,11 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintHorizontal_bias="0.906"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.681"
-        tools:ignore="HardcodedText,TextFields"
-        android:background="@android:color/transparent"/>
+        app:layout_constraintVertical_bias="0.684"
+        tools:ignore="HardcodedText,TextFields" />
 
     <EditText
         android:id="@+id/units"
@@ -330,15 +326,15 @@
 
     <TextView
         android:id="@+id/textView18"
-        android:fontFamily="sans-serif-black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
         android:text="Brick Count"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.782"
@@ -362,31 +358,31 @@
 
     <TextView
         android:id="@+id/textView20"
-        android:fontFamily="sans-serif-black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
         android:text="Sand in kg"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.906"
+        app:layout_constraintVertical_bias="0.892"
         tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/sandOut"
-        android:fontFamily="sans-serif-black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
         android:text="0 bags"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.835"
+        app:layout_constraintHorizontal_bias="0.806"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.84" />
@@ -401,10 +397,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.838"
+        app:layout_constraintHorizontal_bias="0.797"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.906" />
+        app:layout_constraintVertical_bias="0.892" />
 
     <TextView
         android:id="@+id/cementOut"
@@ -448,7 +444,7 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintHorizontal_bias="0.576"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022"
@@ -486,15 +482,15 @@
         android:id="@+id/imageView9"
         android:layout_width="44dp"
         android:layout_height="44dp"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.836"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.62"
+        app:layout_constraintVertical_bias="0.614"
         app:srcCompat="@drawable/height"
-        tools:ignore="ContentDescription"
-        android:background="@android:color/transparent"/>
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -531,7 +527,7 @@
         app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.62"
+        app:layout_constraintVertical_bias="0.614"
         app:srcCompat="@drawable/width"
         tools:ignore="ContentDescription" />
 
@@ -550,9 +546,9 @@
 
     <TextView
         android:id="@+id/textView28"
-        android:fontFamily="sans-serif-black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="serif"
         android:text="Enter all the inputs in Meters."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -565,9 +561,9 @@
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
         android:src="@drawable/iconback"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
