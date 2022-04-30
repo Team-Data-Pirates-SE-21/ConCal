@@ -19,6 +19,20 @@ The core component of the project is the prediction of compressive concrete stre
 
 <h2>Features</h2>
 
+<ul>
+<li>Concrete Strength Predictor</li>
+<li>Brick Calculator</li>
+<li>AC Size Calculator</li>
+<li>Wood Frame Calculator</li>
+<li>Flooring Calculator</li>
+<li>Stair Case Mixture Calculator</li>
+<li>Steel Weight Calculator</li>
+<li>Anti-termit Calculator</li>
+<li>Solar Rooftop Calculator</li>
+<li>Water Tank Capacity</li>
+</ul>
+
+
 <h2> Compressive Concrete Strength Predictor</h2>
 
 <h3>Problem background</h3>
