@@ -1,6 +1,6 @@
 # ConCal
 ConCal project of SE-21 IIT.
-<img src="https://github.com/Team-Data-Pirates-SE-21/ConCal/blob/main/app/src/main/res/drawable/appicon.png" width="300" align="right"/>
+<img src="https://github.com/Team-Data-Pirates-SE-21/ConCal/blob/main/app/src/main/res/drawable/appicon.png" width="450" align="right"/>
 
 <h4>Members</h4>
 <ol>
