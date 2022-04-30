@@ -33,10 +33,7 @@ public class ConcreteStrength extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_concrete_strength);
 
-        if(savedInstanceState!=null){   //recovering the variables
-            output.setText(savedInstanceState.getString("strength"));
-            outputDefault.setText(savedInstanceState.getString("strengthDefault"));
-        }
+
 
         String url="https://concal-backend-dp.herokuapp.com/";  //url of the server
 
@@ -70,6 +67,10 @@ public class ConcreteStrength extends AppCompatActivity {
         Button maxFine=findViewById(R.id.maxFineAggregate);
         Button minAge=findViewById(R.id.minAge);
         Button maxAge=findViewById(R.id.maxAge);
+        if(savedInstanceState!=null){   //recovering the variables
+            output.setText(savedInstanceState.getString("strength"));
+            outputDefault.setText(savedInstanceState.getString("strengthDefault"));
+        }
 
         String defaultDay="28"; // Default day(To predict the 28th day strength)
 
