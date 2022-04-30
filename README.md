@@ -67,7 +67,7 @@ By using this application users can save their time and increase their work effi
 <h2>Data Requirements</h2>
 
 The project is based on machine learning; thus, the team needs some data in datasets to predict 
-the strength of the concrete.
+the strength of the concrete.<br>
 Data set - https://www.kaggle.com/prathamtripathi/regression-with-neural-networking
 Among the few available datasets, the team chose, this data set as it is for regression and neural 
 networking. It contains a lot of data such as cement, water, fly ash and age by day etc. (8 raw 
