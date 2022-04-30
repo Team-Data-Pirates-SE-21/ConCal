@@ -1,5 +1,6 @@
 # ConCal
 ConCal project of SE-21 IIT.
+<img src="https://github.com/Team-Data-Pirates-SE-21/ConCal/blob/main/app/src/main/res/drawable/appicon.png" width="700"/>
 
 <h4>Members</h4>
 <ol>
@@ -69,6 +70,7 @@ By using this application users can save their time and increase their work effi
 The project is based on machine learning; thus, the team needs some data in datasets to predict 
 the strength of the concrete.<br>
 Data set - https://www.kaggle.com/prathamtripathi/regression-with-neural-networking
+<br>
 Among the few available datasets, the team chose, this data set as it is for regression and neural 
 networking. It contains a lot of data such as cement, water, fly ash and age by day etc. (8 raw 
 materials).
