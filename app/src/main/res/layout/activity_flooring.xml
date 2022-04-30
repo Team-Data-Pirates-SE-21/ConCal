@@ -188,6 +188,7 @@
 
     <EditText
         android:id="@+id/len"
+        android:background="@null"
         android:layout_width="142dp"
         android:layout_height="44dp"
         android:ems="10"
@@ -220,7 +221,7 @@
         app:layout_constraintHorizontal_bias="0.188"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571" />
+        app:layout_constraintVertical_bias="0.568" />
 
     <EditText
         android:id="@+id/tWidth"
@@ -245,6 +246,7 @@
         android:layout_width="142dp"
         android:layout_height="44dp"
         android:ems="10"
+        android:background="@null"
         android:gravity="center"
         android:hint="Width in m"
         android:inputType="numberSigned|numberDecimal"
@@ -430,7 +432,7 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="serif"
         android:text="*Please enter all the inputs in meters."
         android:textColor="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
