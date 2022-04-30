@@ -5,7 +5,7 @@ ConCal project of SE-21 IIT.
 <h4>Members</h4>
 <ol>
 <li>Chamoda De Silva</li>
-<li>Janith Chanaka</li>
+<li>Janith Abhayarathna</li>
 <li>Nethmini Weerakon</li>
 <li> Hasini Perera</li>
 <li>Nathan Fernando</li>
