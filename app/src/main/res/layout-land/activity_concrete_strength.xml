@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="729dp"
+    android:layout_height="409dp"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText"
+    android:background="@color/appBackground"
+    app:guidelineUseRtl="false"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="384dp"
+        android:layout_marginTop="596dp"
+        android:fontFamily="sans-serif-black"
+        android:text="0.0 MPa"
+        android:textColor="#FFB2A6"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/txtAnswer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="384dp"
+        android:layout_marginTop="624dp"
+        android:fontFamily="sans-serif-black"
+        android:text="0.0 MPa"
+        android:textColor="#FFB2A6"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnPredict"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="664dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="Calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="183dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="600dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Strength"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="183dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="632dp"
+        android:fontFamily="sans-serif-black"
+        android:text="28th Day Strength"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="544dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Age"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/maxBlast"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="632dp"
+        android:layout_marginTop="156dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="+"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/maxWater"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="632dp"
+        android:layout_marginTop="272dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="+"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/maxCement"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="632dp"
+        android:layout_marginTop="96dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="+"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/minFineAggregate"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="432dp"
+        android:layout_marginTop="472dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/minCement"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="432dp"
+        android:layout_marginTop="96dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="340dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Superplasticizer"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/editTextInput8"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="524dp"
+        android:layout_marginTop="560dp"
+        android:autofillHints="Age in days"
+        android:background="@null"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:inputType="number|numberDecimal"
+        android:text="0"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,LabelFor" />
+
+    <EditText
+        android:id="@+id/editTextInput3"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="516dp"
+        android:layout_marginTop="224dp"
+        android:autofillHints="Fly Ash"
+        android:background="@null"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:inputType="number|numberDecimal"
+        android:text="0"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,LabelFor" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="276dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Water"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Cement"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="232dp"
+        android:text="kg / m3"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="432dp"
+        android:text="kg / m3"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="120dp"
+        android:text="kg / m3"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/maxFineAggregate"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="632dp"
+        android:layout_marginTop="468dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="+"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/editTextInput6"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="396dp"
+        android:autofillHints="Coarse Aggregate"
+        android:background="@null"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:inputType="number|numberDecimal"
+        android:minHeight="48dp"
+        android:text="0"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.786"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,LabelFor" />
+
+    <TextView
+        android:id="@+id/width"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="180dp"
+        android:text="kg / m3"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/editTextInput"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="516dp"
+        android:layout_marginTop="96dp"
+        android:autofillHints="Cement"
+        android:background="@null"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:inputType="number|numberDecimal"
+        android:text="0"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,LabelFor" />
+
+    <EditText
+        android:id="@+id/editTextInput5"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="516dp"
+        android:layout_marginTop="340dp"
+        android:autofillHints="Superplasticzer"
+        android:background="@null"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:inputType="number|numberDecimal"
+        android:text="0"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,LabelFor" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="300dp"
+        android:text="kg / m3"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/minAge"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="432dp"
+        android:layout_marginTop="544dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="500dp"
+        android:text="kg / m3"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/minFine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="476dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Fine Aggregate"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/minSuper"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="432dp"
+        android:layout_marginTop="328dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/maxAge"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="632dp"
+        android:layout_marginTop="544dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="+"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextInput7"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="524dp"
+        android:layout_marginTop="472dp"
+        android:autofillHints="Fine Aggregate"
+        android:background="@null"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:inputType="number|numberDecimal"
+        android:text="0"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/minBlast"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="432dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="364dp"
+        android:text="kg / m3"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/maxCoarse"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="632dp"
+        android:layout_marginTop="328dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="+"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="568dp"
+        android:text="Days"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/minFly"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="432dp"
+        android:layout_marginTop="216dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextInput2"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="516dp"
+        android:layout_marginTop="168dp"
+        android:autofillHints="Blast Furnace Slag"
+        android:background="@null"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:inputType="number|numberDecimal"
+        android:text="0"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextInput4"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="516dp"
+        android:layout_marginTop="288dp"
+        android:autofillHints="Water"
+        android:background="@null"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:inputType="number|numberDecimal"
+        android:text="0"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/maxSuper"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="632dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="+"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/maxFly"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="632dp"
+        android:layout_marginTop="212dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="+"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="212dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Fly Ash"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="412dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Coarse Aggregate"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/minWater"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="432dp"
+        android:layout_marginTop="272dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/minCoarse"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="432dp"
+        android:layout_marginTop="408dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="160dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Blast Furnace Slag"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="96dp"
+        android:contentDescription="cement"
+        android:src="@drawable/cement1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cement1"
+        tools:srcCompat="@drawable/cement1" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="160dp"
+        android:src="@drawable/powder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/powder"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/powder" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="212dp"
+        android:src="@drawable/blast"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blast"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/blast" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="272dp"
+        android:src="@drawable/water"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/water"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/water" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="340dp"
+        android:src="@drawable/water_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/water_icon"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/water_icon" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="408dp"
+        android:src="@drawable/stones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/stones"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/stones" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="476dp"
+        android:src="@drawable/sand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sand"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/sand" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="544dp"
+        android:src="@drawable/age"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/age"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Compressive Concrete Strength"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/iconback"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
