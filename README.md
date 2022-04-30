@@ -8,9 +8,10 @@ The core component of the project is the prediction of compressive concrete stre
 
 <img src="https://www.greenbiz.com/sites/default/files/images/articles/featured/shutterstock7430463401.jpg" width="700"/>
 
-# Features
+<h2>Features</h2>
 
 
 
 
-# Technologies
+
+<h2>Technologies<h2>
