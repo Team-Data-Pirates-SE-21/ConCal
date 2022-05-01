@@ -90,7 +90,7 @@ public class SolarRooftop extends AppCompatActivity {
                         throw new IllegalStateException("Unexpected value: " + typeOfTheMember);
                 }
 
-                double rooftopCapacity = Math.round((dailyConsumption / 4.5) * 10.0) /10.0;
+                double rooftopCapacity = Math.round((dailyConsumption / 4.5) * 100.0) /100.0;
                 int panelNo = (int) Math.round(rooftopCapacity * 3);
 
                 double areaRequired = Math.round((rooftopCapacity * 95) * 100.0) / 100.0;

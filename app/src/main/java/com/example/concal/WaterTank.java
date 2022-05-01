@@ -69,7 +69,7 @@ public class WaterTank extends AppCompatActivity {
                 Double quantity = volume * 1000;
 
                 result.setText(quantity + " lt");
-                volumeResult.setText(volume + " m^3");
+                volumeResult.setText(volume + " m\\u00B3");
             }
         });
 
