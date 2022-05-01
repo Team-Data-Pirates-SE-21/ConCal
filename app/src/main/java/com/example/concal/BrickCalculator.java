@@ -106,8 +106,8 @@ public class BrickCalculator extends AppCompatActivity {
                 double brickVolume = (brickLength + 0.01) * (brickWidth + 0.01) * (brickHeight + 0.01);
 
                 int noOfBricks;
-                double tempBricks = ((brickMasonry / brickVolume) % 10);
-                if (tempBricks == 0) {
+                double tempBricks = brickMasonry / brickVolume;
+                if (tempBricks % 1 == 0) {
                     noOfBricks = (int) (brickMasonry / brickVolume);
                 } else {
                     noOfBricks = (int) (brickMasonry / brickVolume) + 1;
