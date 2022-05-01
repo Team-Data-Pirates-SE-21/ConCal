@@ -97,7 +97,7 @@ public class SolarRooftop extends AppCompatActivity {
                 panelCount.setText(panelNo + " Panels");
                 system.setText(rooftopCapacity + " Kw");
                 dailyUnits.setText(dailyConsumption + " units/day");
-                rooftopArea.setText(areaRequired + " sq.m");
+                rooftopArea.setText(areaRequired + " sq.ft");
             }
         });
 

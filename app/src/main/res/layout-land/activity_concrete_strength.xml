@@ -703,12 +703,12 @@
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="204dp"
+        android:layout_marginStart="160dp"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-black"
-        android:text="Compressive Concrete Strength"
-        android:textSize="24sp"
+        android:text="Compressive Concrete Strength Predictor"
         android:textColor="@color/black"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

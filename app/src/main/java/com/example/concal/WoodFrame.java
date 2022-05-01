@@ -57,7 +57,7 @@ public class WoodFrame extends AppCompatActivity {
 
                 double volume = l * t * d;
 
-                result.setText(volume + " m^3");
+                result.setText(volume + " m\u00B3");
             }
         });
 
