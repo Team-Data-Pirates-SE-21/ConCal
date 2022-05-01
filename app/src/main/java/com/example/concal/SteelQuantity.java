@@ -50,10 +50,12 @@ public class SteelQuantity extends AppCompatActivity {
             if (quantity.getText().toString().equals("0")) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Please fill the empty field", Toast.LENGTH_LONG);
                 toast.show();
+                outputs.setText("");
 
             } else if (notANumInRange(quantity.getText().toString())) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Inputs should be positive", Toast.LENGTH_LONG);
                 toast.show();
+                outputs.setText("");
 
             } else {
 

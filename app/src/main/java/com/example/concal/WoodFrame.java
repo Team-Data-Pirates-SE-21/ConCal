@@ -41,10 +41,12 @@ public class WoodFrame extends AppCompatActivity {
             if (length.getText().toString().equals("0.0") || depth.getText().toString().equals("0.0") || thickness.getText().toString().equals("0.0")) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Please fill the empty fields", Toast.LENGTH_LONG);
                 toast.show();
+                result.setText("");
 
             } else if (notANumInRange(length.getText().toString()) || notANumInRange(depth.getText().toString()) || notANumInRange(thickness.getText().toString())) {
                 Toast toast = Toast.makeText(getApplicationContext(), "All inputs should be positive", Toast.LENGTH_LONG);
                 toast.show();
+                result.setText("");
 
             } else {
                 String tempL = length.getText().toString();
@@ -54,7 +56,7 @@ public class WoodFrame extends AppCompatActivity {
                 String tempT = thickness.getText().toString();
                 double t = Double.parseDouble(tempT);
 
-                double volume = l * t * d;
+                double volume = Math.round((l * t * d) * 100.0) / 100.0;
 
                 result.setText(volume + " m\u00B3");
             }
