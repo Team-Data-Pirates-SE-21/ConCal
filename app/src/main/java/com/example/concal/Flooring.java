@@ -75,8 +75,14 @@ public class Flooring extends AppCompatActivity {
                 double tileArea = tileLength * tileWidth;
                 double floorArea = floorLength * floorWidth;
 
-                int numTiles = (int) Math.ceil(floorArea / tileArea);
-                result1.setText(String.valueOf(numTiles));
+                int numTiles;
+                double tempTiles = floorArea / tileArea;
+                if (tempTiles % 1 == 0) {
+                    numTiles = (int) (floorArea / tileArea);
+                } else {
+                    numTiles = (int) ((floorArea / tileArea) + 1);
+                }
+                result1.setText((numTiles + " tiles"));
 
                 double volumeWithBedding = floorArea * 0.07;
 
