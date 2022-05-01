@@ -89,10 +89,10 @@ public class StairCase extends AppCompatActivity {
                 double slantHeighteq = Math.pow(lengthofWaistslab,p) + Math.pow(10.00,p);
                 double slantHeight = Math.sqrt(slantHeighteq);
                 double volumeofWaistslab = stairwidtH * slabthicK * slantHeight;
-                double totalVolumeofstair = voltotalstep + volumeofWaistslab;
-                double dryVolume = totalVolumeofstair * 1.524;
+                double totalVolumeofstair = Math.round((voltotalstep + volumeofWaistslab) * 100.00) / 100.00;
+                double dryVolume = (totalVolumeofstair/35.315) * 1.524;
 
-                volumeOut.setText(String.valueOf(totalVolumeofstair));
+                volumeOut.setText((totalVolumeofstair + " ft\u00B3"));
 
                 //Amount of cement counter
 
@@ -101,54 +101,57 @@ public class StairCase extends AppCompatActivity {
                 double aggregateVolume;
                 double sandinTon;
                 double aggregateinTon;
-                double cementBags;
+                int cementBags;
                 String gradeRatio = gradeSpinner.getSelectedItem().toString();
                 switch (gradeRatio) {
+
                     case "M20":
                         cementVolume = (dryVolume * 1) / 5.5;
-                        cementBags = cementVolume / 0.035;
+                        cementBags = (int) Math.round(cementVolume / 0.035);
                         sandVolume = (dryVolume * 1.5) / 5.5;
-                        sandinTon = (sandVolume * 1550) /1000;
+                        sandinTon = Math.round(((sandVolume * 1550) /1000) * 100.0) / 100.0;
                         aggregateVolume = (dryVolume * 3) / 5.5;
-                        aggregateinTon = (aggregateVolume) * 1350 / 1000;
-                        cementOut.setText(cementBags + " Bags");
-                        sandOut.setText(sandinTon + " Tons");
-                        out.setText(aggregateinTon + " Tons");
-                        break;
-                    case "M15":
-                        cementVolume = (dryVolume * 1) / 7;
-                        cementBags = cementVolume / 0.035;
-                        sandVolume = (dryVolume * 1.5) / 7;
-                        sandinTon = (sandVolume * 1550) /1000;
-                        aggregateVolume = (dryVolume * 3) / 7;
-                        aggregateinTon = (aggregateVolume) * 1350 / 1000;
-                        cementOut.setText(cementBags + " Bags");
-                        sandOut.setText(sandinTon + " Tons");
-                        out.setText(aggregateinTon + " Tons");
-                        break;
-                    case "M10":
-                        cementVolume = (dryVolume * 1) / 10;
-                        cementBags = cementVolume / 0.035;
-                        sandVolume = (dryVolume * 3) / 10;
-                        sandinTon = (sandVolume * 1550) /1000;
-                        aggregateVolume = (dryVolume * 6) / 10;
-                        aggregateinTon = (aggregateVolume) * 1350 / 1000;
-                        cementOut.setText(cementBags + " Bags");
-                        sandOut.setText(sandinTon + " Tons");
-                        out.setText(aggregateinTon + " Tons");
-                        break;
-                    case "M7.5":
-                        cementVolume = (dryVolume * 1) / 13;
-                        cementBags = cementVolume / 0.035;
-                        sandVolume = (dryVolume * 4) / 13;
-                        sandinTon = (sandVolume * 1550) /1000;
-                        aggregateVolume = (dryVolume * 8) / 13;
-                        aggregateinTon = (aggregateVolume) * 1350 / 1000;
+                        aggregateinTon = Math.round(((aggregateVolume) * 1350 / 1000) * 100.0) / 100.0;
                         cementOut.setText(cementBags + " Bags");
                         sandOut.setText(sandinTon + " Tons");
                         out.setText(aggregateinTon + " Tons");
                         break;
 
+                    case "M15":
+                        cementVolume = (dryVolume * 1) / 7;
+                        cementBags = (int) Math.round(cementVolume / 0.035);
+                        sandVolume = (dryVolume * 1.5) / 7;
+                        sandinTon = Math.round(((sandVolume * 1550) /1000) * 100.0) / 100.0;
+                        aggregateVolume = (dryVolume * 3) / 7;
+                        aggregateinTon = Math.round(((aggregateVolume) * 1350 / 1000) * 100.0) / 100.0;
+                        cementOut.setText(cementBags + " Bags");
+                        sandOut.setText(sandinTon + " Tons");
+                        out.setText(aggregateinTon + " Tons");
+                        break;
+
+                    case "M10":
+                        cementVolume = (dryVolume * 1) / 10;
+                        cementBags = (int) Math.round(cementVolume / 0.035);
+                        sandVolume = (dryVolume * 3) / 10;
+                        sandinTon = Math.round(((sandVolume * 1550) /1000) * 100.0) / 100.0;
+                        aggregateVolume = (dryVolume * 6) / 10;
+                        aggregateinTon = Math.round(((aggregateVolume) * 1350 / 1000) * 100.0) / 100.0;
+                        cementOut.setText(cementBags + " Bags");
+                        sandOut.setText(sandinTon + " Tons");
+                        out.setText(aggregateinTon + " Tons");
+                        break;
+
+                    case "M7.5":
+                        cementVolume = (dryVolume * 1) / 13;
+                        cementBags = (int) Math.round(cementVolume / 0.035);
+                        sandVolume = (dryVolume * 4) / 13;
+                        sandinTon = Math.round(((sandVolume * 1550) /1000) * 100.0) / 100.0;
+                        aggregateVolume = (dryVolume * 8) / 13;
+                        aggregateinTon = Math.round(((aggregateVolume) * 1350 / 1000) * 100.0) / 100.0;
+                        cementOut.setText(cementBags + " Bags");
+                        sandOut.setText(sandinTon + " Tons");
+                        out.setText(aggregateinTon + " Tons");
+                        break;
                 }
             }
         });
