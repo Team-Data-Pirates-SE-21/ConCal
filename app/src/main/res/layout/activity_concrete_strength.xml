@@ -98,9 +98,48 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="340dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="160dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="+"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/minBlast"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="168dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Blast Furnace Slag"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextInput2"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="164dp"
+        android:autofillHints="Blast Furnace Slag"
+        android:background="@null"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:inputType="number|numberDecimal"
+        android:text="0"
+        android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -109,11 +148,39 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="340dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="280dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="+"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/minWater"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="280dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextInput4"
+        android:layout_width="66dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="284dp"
+        android:autofillHints="Water"
+        android:background="@null"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:inputType="number|numberDecimal"
+        android:text="0"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor" />
 
     <Button
         android:id="@+id/maxCement"
@@ -177,23 +244,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText,LabelFor"
         android:autofillHints="Age in days" />
-
-    <EditText
-        android:id="@+id/editTextInput3"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="264dp"
-        android:layout_marginTop="224dp"
-        android:background="@null"
-        android:ems="10"
-        android:fontFamily="sans-serif-black"
-        android:inputType="number|numberDecimal"
-        android:text="0"
-        android:textAlignment="center"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="Fly Ash"
-        tools:ignore="HardcodedText,LabelFor" />
 
     <TextView
         android:id="@+id/textView4"
@@ -316,23 +366,6 @@
         tools:ignore="HardcodedText,LabelFor"
         android:autofillHints="Cement" />
 
-    <EditText
-        android:id="@+id/editTextInput5"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="264dp"
-        android:layout_marginTop="340dp"
-        android:background="@null"
-        android:ems="10"
-        android:fontFamily="sans-serif-black"
-        android:inputType="number|numberDecimal"
-        android:text="0"
-        android:textAlignment="center"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="Superplasticzer"
-        tools:ignore="HardcodedText,LabelFor" />
-
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
@@ -381,17 +414,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/minSuper"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="336dp"
-        android:background="@drawable/circlebackgroundbutton"
-        android:text="-"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/maxAge"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -407,7 +429,8 @@
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="264dp"
-        android:layout_marginTop="476dp"
+        android:layout_marginTop="484dp"
+        android:autofillHints="Fine Aggregate"
         android:background="@null"
         android:ems="10"
         android:fontFamily="sans-serif-black"
@@ -416,19 +439,7 @@
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="Fine Aggregate"
         tools:ignore="LabelFor" />
-
-    <Button
-        android:id="@+id/minBlast"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="152dp"
-        android:background="@drawable/circlebackgroundbutton"
-        android:text="-"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView14"
@@ -446,7 +457,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="340dp"
-        android:layout_marginTop="412dp"
+        android:layout_marginTop="408dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="+"
         app:layout_constraintStart_toStartOf="parent"
@@ -464,57 +475,41 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/minFly"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="212dp"
-        android:background="@drawable/circlebackgroundbutton"
-        android:text="-"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextInput2"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="264dp"
-        android:layout_marginTop="160dp"
-        android:background="@null"
-        android:ems="10"
-        android:fontFamily="sans-serif-black"
-        android:inputType="number|numberDecimal"
-        android:text="0"
-        android:textAlignment="center"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="Blast Furnace Slag" />
-
-    <EditText
-        android:id="@+id/editTextInput4"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="264dp"
-        android:layout_marginTop="276dp"
-        android:background="@null"
-        android:ems="10"
-        android:fontFamily="sans-serif-black"
-        android:inputType="number|numberDecimal"
-        android:text="0"
-        android:textAlignment="center"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="Water"
-        tools:ignore="LabelFor" />
-
-    <Button
         android:id="@+id/maxSuper"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="340dp"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="344dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="+"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextInput5"
+        android:layout_width="70dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="344dp"
+        android:autofillHints="Superplasticzer"
+        android:background="@null"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:inputType="number|numberDecimal"
+        android:text="0"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,LabelFor" />
+
+    <Button
+        android:id="@+id/minSuper"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="344dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="-"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -523,11 +518,39 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="340dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="220dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="+"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/minFly"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/circlebackgroundbutton"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextInput3"
+        android:layout_width="71dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="224dp"
+        android:autofillHints="Fly Ash"
+        android:background="@null"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:inputType="number|numberDecimal"
+        android:text="0"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,LabelFor" />
 
     <TextView
         android:id="@+id/textView3"
@@ -554,17 +577,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/minWater"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="272dp"
-        android:background="@drawable/circlebackgroundbutton"
-        android:text="-"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/minCoarse"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -572,18 +584,6 @@
         android:layout_marginTop="408dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="-"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="160dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Blast Furnace Slag"
-        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
