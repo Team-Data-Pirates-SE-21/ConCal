@@ -37,12 +37,11 @@ public class AntiTermite extends AppCompatActivity {
             if (length.getText().toString().equals("0.0") || width.getText().toString().equals("0.0")) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Please check the inputs.", Toast.LENGTH_LONG);
                 toast.show();
-                result.setText("Error!");
 
             } else if (notANumInRange(length.getText().toString()) || notANumInRange(width.getText().toString())) {
                 Toast toast = Toast.makeText(getApplicationContext(), "All inputs should be positive", Toast.LENGTH_LONG);
                 toast.show();
-                result.setText("Error!");
+
             } else {
 
                 String tempL = length.getText().toString();

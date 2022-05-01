@@ -69,16 +69,10 @@ public class BrickCalculator extends AppCompatActivity {
             if (length.getText().toString().equals("0.0") || height.getText().toString().equals("0.0") || bLength.getText().toString().equals("0.0") || bWidth.getText().toString().equals("0.0") || bHeight.getText().toString().equals("0.0")) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Please fill the empty fields", Toast.LENGTH_LONG);
                 toast.show();
-                out.setText("Error!");
-                cementOut.setText("Error!");
-                sandOut.setText("Error!");
 
             } else if (notANumInRange(length.getText().toString()) || notANumInRange(height.getText().toString()) || notANumInRange(bLength.getText().toString()) || notANumInRange(bWidth.getText().toString()) || notANumInRange(bHeight.getText().toString())) {
                 Toast toast = Toast.makeText(getApplicationContext(), "All inputs should be positive", Toast.LENGTH_LONG);
                 toast.show();
-                out.setText("Error!");
-                cementOut.setText("Error!");
-                sandOut.setText("Error!");
 
             } else {
                 // Number of bricks counter

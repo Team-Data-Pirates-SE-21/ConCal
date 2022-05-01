@@ -49,16 +49,11 @@ public class Flooring extends AppCompatActivity {
             if (length.getText().toString().equals("0.0") || width.getText().toString().equals("0.0") || tLength.getText().toString().equals("0.0") || tWidth.getText().toString().equals("0.0")) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Please fill the empty fields", Toast.LENGTH_LONG);
                 toast.show();
-                result1.setText("Error!");
-                result2.setText("Error!");
-                result3.setText("Error!");
 
             } else if (notANumInRange(length.getText().toString()) || notANumInRange(width.getText().toString()) || notANumInRange(tLength.getText().toString()) || notANumInRange(tWidth.getText().toString())) {
                 Toast toast = Toast.makeText(getApplicationContext(), "All inputs should be positive", Toast.LENGTH_LONG);
                 toast.show();
-                result1.setText("Error!");
-                result2.setText("Error!");
-                result3.setText("Error!");
+
             } else {
 
                 String tempLength = length.getText().toString();

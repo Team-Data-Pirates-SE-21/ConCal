@@ -56,18 +56,10 @@ public class StairCase extends AppCompatActivity {
             if (riser.getText().toString().equals("0") && tread.getText().toString().equals("0") && stairwidth.getText().toString().equals("0") && stairheight.getText().toString().equals("0") && slabthick.getText().toString().equals("0")) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Please fill the empty fields", Toast.LENGTH_LONG);
                 toast.show();
-                out.setText("Error!");
-                cementOut.setText("Error!");
-                sandOut.setText("Error!");
-                volumeOut.setText("Error!");
 
             } else if (notANumInRange(riser.getText().toString()) || notANumInRange(tread.getText().toString()) || notANumInRange(stairwidth.getText().toString()) || notANumInRange(stairheight.getText().toString()) || notANumInRange(slabthick.getText().toString())) {
                 Toast toast = Toast.makeText(getApplicationContext(), "All inputs should be positive", Toast.LENGTH_LONG);
                 toast.show();
-                out.setText("Error!");
-                cementOut.setText("Error!");
-                sandOut.setText("Error!");
-                volumeOut.setText("Error!");
 
             } else {
 

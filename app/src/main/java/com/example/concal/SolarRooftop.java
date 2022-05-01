@@ -59,18 +59,11 @@ public class SolarRooftop extends AppCompatActivity {
             if (units.getText().toString().equals("0") || units.getText().toString().equals("0.0")) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Please check the number of units.", Toast.LENGTH_LONG);
                 toast.show();
-                panelCount.setText("Error!");
-                system.setText("Error!");
-                dailyUnits.setText("Error!");
-                rooftopArea.setText("Error!");
 
             } else if (notANumInRange(units.getText().toString())) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Inputs should be positive", Toast.LENGTH_LONG);
                 toast.show();
-                panelCount.setText("Error!");
-                system.setText("Error!");
-                dailyUnits.setText("Error!");
-                rooftopArea.setText("Error!");
+
             } else {
 
                 double unitCount = Double.parseDouble(units.getText().toString());

@@ -43,12 +43,10 @@ public class AirConditioner extends AppCompatActivity {
             if (rLength.getText().toString().equals("0.0") || rBreadth.getText().toString().equals("0.0") || rHeight.getText().toString().equals("0.0") || pCount.getText().toString().equals("0") || maxTemp.getText().toString().equals("0")) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Please fill the empty fields", Toast.LENGTH_LONG);
                 toast.show();
-                acSizeText.setText("Error!");
 
             } else if (notANumInRange(rLength.getText().toString()) || notANumInRange(rBreadth.getText().toString()) || notANumInRange(rHeight.getText().toString()) || notANumInRange(pCount.getText().toString()) || notANumInRange(maxTemp.getText().toString())) {
                 Toast toast = Toast.makeText(getApplicationContext(), "All inputs should be positive", Toast.LENGTH_LONG);
                 toast.show();
-                acSizeText.setText("Error!");
 
             } else {
                 final String tempLength = rLength.getText().toString();
@@ -90,7 +88,7 @@ public class AirConditioner extends AppCompatActivity {
                 }
 
                 double acSize = Math.round((((length * breadth * 20) / 12000) + noOfPerson + temperature + heightEquation) * 100.0) / 100.0;
-                acSizeText.setText(acSize + " Ton");
+                acSizeText.setText(acSize + " Tons");
             }
         });
 
