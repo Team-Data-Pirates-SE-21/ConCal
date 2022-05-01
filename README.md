@@ -7,7 +7,7 @@ ConCal project of SE-21 IIT.
 <li>Chamoda De Silva</li>
 <li>Janith Chanaka</li>
 <li>Nethmini Weerakon</li>
-<li> Hasini Perera</li>
+<li>Hasini Perera</li>
 <li>Nathan Fernando</li>
 </ol>
 
@@ -47,7 +47,7 @@ mixture is a very costly and time-consuming matter. To get the right concrete ca
 engineers must wait 28 days for the concrete to fix and furthermore days to get the required
 result. Because it needs to be fixed and come to near the peak of compressive strength. The
 concrete achieves 65% of their strength at 7 days and 90% at 14 days. However, people should
-wait at least 28 days for it to come to near to the peak. (Meltem et al,2008)
+wait at least 28 days for it to come to near to the peak.
 On the other hand, some constructors don't even know the concrete strength to do their
 constructions. Since they do not know the right strength of the concrete the construction project
 will result in a failure. Furthermore, the mixture can be costly more than the purpose or not
