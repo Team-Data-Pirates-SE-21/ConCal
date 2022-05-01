@@ -104,7 +104,8 @@ public class ConcreteStrength extends AppCompatActivity {
                     try {
                         JSONObject jsonObject = new JSONObject((response)); // Converting the response to JSON
                         String data = jsonObject.getString("output");   // Getting the output from the server
-                        output.setText(data.toString() + " MPa");   // Setting the output to the text view
+                        double roundedData=(double) Math.round(Double.parseDouble(data) * 1000) / 1000;
+                        output.setText(Double.toString(roundedData)+ " MPa");   // Setting the output to the text view
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -124,7 +125,8 @@ public class ConcreteStrength extends AppCompatActivity {
                     try {
                         JSONObject jsonObject = new JSONObject((response)); // Converting the response to JSON
                         String data = jsonObject.getString("output");   // Getting the output from the server
-                        outputDefault.setText(data.toString() + " MPa");
+                        double roundedData=(double) Math.round(Double.parseDouble(data) * 1000) / 1000;
+                        outputDefault.setText(Double.toString(roundedData)+ " MPa");
 
                         loadingDialog.dismissDialog(); //dismissing the progress bar
 
