@@ -2,11 +2,9 @@ package com.example.concal;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,7 +12,6 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,6 +21,7 @@ public class BrickCalculator extends AppCompatActivity {
     TextView out;
     TextView cementOut;
     TextView sandOut;
+    int cementBags;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -83,7 +81,7 @@ public class BrickCalculator extends AppCompatActivity {
                 sandOut.setText("Error!");
 
             } else {
-                // NUMBER OF Bricks counter
+                // Number of bricks counter
 
                 double wallThickness;
                 String tempLength = length.getText().toString();
@@ -107,94 +105,101 @@ public class BrickCalculator extends AppCompatActivity {
                 double brickMasonry = wallLength * wallHeight * wallThickness;
                 double brickVolume = (brickLength + 0.01) * (brickWidth + 0.01) * (brickHeight + 0.01);
 
-                int noOfBricks = (int) (brickMasonry / brickVolume);
+                int noOfBricks;
+                double tempBricks = ((brickMasonry / brickVolume) % 10);
+                if (tempBricks == 0) {
+                    noOfBricks = (int) (brickMasonry / brickVolume);
+                } else {
+                    noOfBricks = (int) (brickMasonry / brickVolume) + 1;
+                }
+
                 out.setText(String.valueOf(noOfBricks));
 
-                //Amount of cement counter
+                //Amount of cement and sand counter
 
                 double cement;
                 double sand;
                 double tempSandQuantity;
                 double sandQuantity;
-                int cementBags;
                 double bricksMortar = noOfBricks * (brickLength * brickWidth * brickHeight);
                 double tempMortar = brickMasonry - bricksMortar;
                 double tempMortar2 = tempMortar + (tempMortar * 0.15); // For the wastage
                 double mortarQuantity = tempMortar2 + (tempMortar2 * 0.25); // For the dry volume
+
                 String wallRatio = ratioSpinner.getSelectedItem().toString();
                 switch (wallRatio) {
                     case "C.M 1:3":
                         cement = mortarQuantity / 4.0;
                         sand = mortarQuantity * (3 / 4.0);
-                        cementBags = (int) (Math.ceil(cement / 0.035));
+                        cementRounder(cement);
                         tempSandQuantity = Math.ceil((sand * 1500));
-                        sandQuantity = Math.round(tempSandQuantity * 100.0) / 100.0;
+                        sandQuantity = Math.round((tempSandQuantity) / 1000 * 100.0) / 100.0;
                         cementOut.setText(cementBags + " bags");
-                        sandOut.setText(sandQuantity + " kg");
+                        sandOut.setText(sandQuantity + " ton");
                         break;
                     case "C.M 1:4":
                         cement = mortarQuantity / 5.0;
                         sand = mortarQuantity * (4 / 5.0);
-                        cementBags = (int) (Math.ceil(cement / 0.035));
-                        tempSandQuantity = Math.ceil((sand * 1500));
-                        sandQuantity = Math.round(tempSandQuantity * 100.0) / 100.0;
+                        cementRounder(cement);
+                        tempSandQuantity = sand * 1500;
+                        sandQuantity = Math.round((tempSandQuantity) / 1000 * 100.0) / 100.0;
                         cementOut.setText(cementBags + " bags");
-                        sandOut.setText(sandQuantity + " kg");
+                        sandOut.setText(sandQuantity + " ton");
                         break;
                     case "C.M 1:5":
                         cement = mortarQuantity / 6.0;
                         sand = mortarQuantity * (5 / 6.0);
-                        cementBags = (int) (Math.ceil(cement / 0.035));
-                        tempSandQuantity = Math.ceil((sand * 1500));
-                        sandQuantity = Math.round(tempSandQuantity * 100.0) / 100.0;
+                        cementRounder(cement);
+                        tempSandQuantity = sand * 1500;
+                        sandQuantity = Math.round((tempSandQuantity) / 1000 * 100.0) / 100.0;
                         cementOut.setText(cementBags + " bags");
-                        sandOut.setText(sandQuantity + " kg");
+                        sandOut.setText(sandQuantity + " ton");
                         break;
                     case "C.M 1:6":
                         cement = mortarQuantity / 7.0;
                         sand = mortarQuantity * (6 / 7.0);
-                        cementBags = (int) (Math.ceil(cement / 0.035));
-                        tempSandQuantity = Math.ceil((sand * 1500));
-                        sandQuantity = Math.round(tempSandQuantity * 100.0) / 100.0;
+                        cementRounder(cement);
+                        tempSandQuantity = sand * 1500;
+                        sandQuantity = Math.round((tempSandQuantity) / 1000 * 100.0) / 100.0;
                         cementOut.setText(cementBags + " bags");
-                        sandOut.setText(sandQuantity + " kg");
+                        sandOut.setText(sandQuantity + " ton");
                         break;
                     case "C.M 1:7":
                         cement = mortarQuantity / 8.0;
                         sand = mortarQuantity * (7 / 8.0);
-                        cementBags = (int) (Math.ceil(cement / 0.035));
-                        tempSandQuantity = Math.ceil((sand * 1500));
-                        sandQuantity = Math.round(tempSandQuantity * 100.0) / 100.0;
+                        cementRounder(cement);
+                        tempSandQuantity = sand * 1500;
+                        sandQuantity = Math.round((tempSandQuantity) / 1000 * 100.0) / 100.0;
                         cementOut.setText(cementBags + " bags");
-                        sandOut.setText(sandQuantity + " kg");
+                        sandOut.setText(sandQuantity + " ton");
                         break;
                     case "C.M 1:8":
                         cement = mortarQuantity / 9.0;
                         sand = mortarQuantity * (8 / 9.0);
-                        cementBags = (int) (Math.ceil(cement / 0.035));
-                        tempSandQuantity = Math.ceil((sand * 1500));
-                        sandQuantity = Math.round(tempSandQuantity * 100.0) / 100.0;
+                        cementRounder(cement);
+                        tempSandQuantity = sand * 1500;
+                        sandQuantity = Math.round((tempSandQuantity) / 1000 * 100.0) / 100.0;
                         cementOut.setText(cementBags + " bags");
-                        sandOut.setText(sandQuantity + " kg");
+                        sandOut.setText(sandQuantity + " ton");
                         break;
                     case "C.M 1:9":
                         cement = mortarQuantity / 10.0;
                         sand = mortarQuantity * (9 / 10.0);
-                        cementBags = (int) (Math.ceil(cement / 0.035));
-                        tempSandQuantity = Math.ceil((sand * 1500));
-                        sandQuantity = Math.round(tempSandQuantity * 100.0) / 100.0;
+                        cementRounder(cement);
+                        tempSandQuantity = sand * 1500;
+                        sandQuantity = Math.round((tempSandQuantity) / 1000 * 100.0) / 100.0;
                         cementOut.setText(cementBags + " bags");
-                        sandOut.setText(sandQuantity + " kg");
+                        sandOut.setText(sandQuantity + " ton");
                         break;
                     default:
                         //Invalid
                         cement = mortarQuantity;
                         sand = mortarQuantity;
-                        cementBags = (int) (Math.ceil(cement / 0.035));
-                        tempSandQuantity = Math.ceil((sand * 1500));
-                        sandQuantity = Math.round(tempSandQuantity * 100.0) / 100.0;
+                        cementRounder(cement);
+                        tempSandQuantity = sand * 1500;
+                        sandQuantity = Math.round((tempSandQuantity) / 1000 * 100.0) / 100.0;
                         cementOut.setText(cementBags + " bags");
-                        sandOut.setText(sandQuantity + " kg");
+                        sandOut.setText(sandQuantity + " ton");
                         break;
                 }
             }
@@ -221,6 +226,15 @@ public class BrickCalculator extends AppCompatActivity {
         });
     }
 
+    private void cementRounder(double num) {
+
+        double tempCement = num / 0.035;
+        if (tempCement == 0) {
+            cementBags = (int) (num / 0.035);
+        } else {
+            cementBags = (int) (num / 0.035) + 1;
+        }
+    }
     /**
      * Validating the user input
      * @param strNum - the user input
