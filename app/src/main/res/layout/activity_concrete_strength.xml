@@ -84,8 +84,8 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="544dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="536dp"
         android:fontFamily="sans-serif-black"
         android:text="Age"
         android:textSize="16sp"
@@ -98,7 +98,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="340dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="156dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="+"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,30 +109,55 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="220dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="156dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="-"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="156dp"
+        android:src="@drawable/powder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/powder"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/powder" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="156dp"
         android:fontFamily="sans-serif-black"
         android:text="Blast Furnace Slag"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/width"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="176dp"
+        android:text="kg / m3"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
     <EditText
         android:id="@+id/editTextInput2"
         android:layout_width="70dp"
         android:layout_height="36dp"
         android:layout_marginStart="264dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="160dp"
         android:autofillHints="Blast Furnace Slag"
         android:background="@null"
         android:ems="10"
@@ -337,18 +362,6 @@
         tools:ignore="HardcodedText,LabelFor"
         android:autofillHints="Coarse Aggregate" />
 
-    <TextView
-        android:id="@+id/width"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="180dp"
-        android:text="kg / m3"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
-
     <EditText
         android:id="@+id/editTextInput"
         android:layout_width="70dp"
@@ -467,8 +480,8 @@
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="568dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="560dp"
         android:text="Days"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -601,19 +614,6 @@
         tools:srcCompat="@drawable/cement1" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="160dp"
-        android:src="@drawable/powder"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/powder"
-        tools:ignore="ContentDescription"
-        tools:srcCompat="@drawable/powder" />
-
-    <ImageView
         android:id="@+id/imageView3"
         android:layout_width="45dp"
         android:layout_height="45dp"
@@ -682,8 +682,8 @@
         android:id="@+id/imageView8"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="544dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="536dp"
         android:src="@drawable/age"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -699,7 +699,7 @@
         android:fontFamily="sans-serif-black"
         android:text="Compressive Concrete Strength Predictor"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="22sp"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
