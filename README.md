@@ -1,5 +1,5 @@
 # ConCal
-ConCal project of SE-21 IIT.
+ConCal is a project of Data Pirates, which registered as SE-21 in IIT.
 <img src="https://github.com/Team-Data-Pirates-SE-21/ConCal/blob/main/app/src/main/res/drawable/appicon.png" width="300" align="right"/>
 
 <h4>Members</h4>
