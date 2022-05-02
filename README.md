@@ -83,4 +83,10 @@ materials).
 <li>Heroku</li>
 </ul>
 
-<img src="https://github.com/Team-Data-Pirates-SE-21/ConCal/blob/main/main_page.png" width="300"/>
+
+<table style="width:100%;border: none;">
+  <tr>
+    <td><img src="https://github.com/Team-Data-Pirates-SE-21/ConCal/blob/main/main_page.png" width="300"/></td>
+    <td><img src="https://github.com/Team-Data-Pirates-SE-21/ConCal/blob/main/core_page.png" width="300"/></td>
+  </tr>
+</table>
