@@ -201,6 +201,7 @@
         app:layout_constraintHorizontal_bias="0.776"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="sans-serif-black"
         app:layout_constraintVertical_bias="0.138" />
 
     <EditText
@@ -219,6 +220,7 @@
         app:layout_constraintHorizontal_bias="0.188"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="sans-serif-black"
         app:layout_constraintVertical_bias="0.549" />
 
     <EditText
@@ -237,6 +239,7 @@
         app:layout_constraintHorizontal_bias="0.81"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="sans-serif-black"
         app:layout_constraintVertical_bias="0.55" />
 
     <EditText
@@ -256,6 +259,7 @@
         app:layout_constraintHorizontal_bias="0.776"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="sans-serif-black"
         app:layout_constraintVertical_bias="0.243" />
 
     <TextView

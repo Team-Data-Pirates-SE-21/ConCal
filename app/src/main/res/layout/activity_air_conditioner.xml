@@ -95,7 +95,7 @@
 
     <Button
         android:id="@+id/bm"
-        android:layout_width="44dp"
+        android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/circlebackgroundbutton"
         android:text="-"
@@ -238,6 +238,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.154"
+        android:fontFamily="sans-serif-black"
         tools:ignore="LabelFor,TextFields,TouchTargetSizeCheck" />
 
     <EditText
@@ -259,6 +260,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.464"
+        android:fontFamily="sans-serif-black"
         tools:ignore="LabelFor" />
 
     <EditText
@@ -280,6 +282,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.262"
+        android:fontFamily="sans-serif-black"
         tools:ignore="LabelFor" />
 
     <EditText
@@ -301,6 +304,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.363"
+        android:fontFamily="sans-serif-black"
         tools:ignore="LabelFor,TextFields" />
 
     <EditText
@@ -322,6 +326,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.572"
+        android:fontFamily="sans-serif-black"
         tools:ignore="LabelFor" />
 
     <TextView

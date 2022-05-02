@@ -219,6 +219,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.096"
         tools:ignore="HardcodedText"
+        android:fontFamily="sans-serif-black"
         android:background="@android:color/transparent"/>
 
     <EditText
@@ -239,6 +240,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.685"
+        android:fontFamily="sans-serif-black"
         tools:ignore="HardcodedText,TextFields" />
 
     <EditText
@@ -259,6 +261,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.683"
+        android:fontFamily="sans-serif-black"
         tools:ignore="HardcodedText,TextFields" />
 
     <EditText
@@ -279,6 +282,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.684"
+        android:fontFamily="sans-serif-black"
         tools:ignore="HardcodedText,TextFields" />
 
     <EditText
@@ -300,6 +304,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.196"
         tools:ignore="HardcodedText"
+        android:fontFamily="sans-serif-black"
         android:background="@android:color/transparent"/>
 
     <Spinner

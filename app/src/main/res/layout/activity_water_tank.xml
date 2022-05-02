@@ -208,6 +208,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.149"
+        android:fontFamily="sans-serif-black"
         tools:ignore="LabelFor,TextFields" />
 
     <EditText
@@ -229,6 +230,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.246"
+        android:fontFamily="sans-serif-black"
         tools:ignore="LabelFor,TextFields" />
 
     <EditText
@@ -250,6 +252,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.334"
+        android:fontFamily="sans-serif-black"
         tools:ignore="LabelFor,TextFields" />
 
     <TextView
@@ -305,10 +308,25 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.735" />
+        app:layout_constraintVertical_bias="0.765" />
+
+    <TextView
+        android:id="@+id/volumeOut2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="0.0 m\u00B3"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.833" />
 
     <TextView
         android:id="@+id/textView41"
@@ -320,10 +338,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
+        app:layout_constraintVertical_bias="0.833" />
 
     <TextView
         android:id="@+id/capacity"
@@ -335,10 +353,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.851"
+        app:layout_constraintHorizontal_bias="0.892"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.735" />
+        app:layout_constraintVertical_bias="0.765" />
 
     <Button
         android:id="@+id/cal"
@@ -353,21 +371,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.954" />
-
-    <TextView
-        android:id="@+id/volumeOut2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="0.0 m\u00B3"
-        android:textColor="@android:color/holo_orange_dark"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.883"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.803" />
 
     <TextView
         android:id="@+id/textView39"

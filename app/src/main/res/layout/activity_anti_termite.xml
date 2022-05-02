@@ -37,6 +37,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.181"
+        android:fontFamily="sans-serif-black"
         tools:ignore="LabelFor,TextFields" />
 
     <TextView
@@ -200,6 +201,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.308"
+        android:fontFamily="sans-serif-black"
         tools:ignore="LabelFor,TextFields" />
 
     <TextView
@@ -230,22 +232,7 @@
         app:layout_constraintHorizontal_bias="0.167"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.827" />
-
-    <TextView
-        android:id="@+id/capacity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="0.0 ml"
-        android:textColor="@android:color/holo_orange_dark"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.861"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.818" />
+        app:layout_constraintVertical_bias="0.84" />
 
     <Button
         android:id="@+id/cal"
@@ -260,7 +247,22 @@
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.938" />
+        app:layout_constraintVertical_bias="0.951" />
+
+    <TextView
+        android:id="@+id/capacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="0.0 ml"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.861"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.831" />
 
     <TextView
         android:id="@+id/textView39"
