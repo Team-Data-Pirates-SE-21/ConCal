@@ -23,10 +23,11 @@
         android:id="@+id/textView61"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
         android:layout_marginTop="308dp"
         android:text="m"
         android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView62"
+        app:layout_constraintHorizontal_bias="0.355"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText" />
@@ -35,10 +36,11 @@
         android:id="@+id/textView62"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="288dp"
         android:layout_marginTop="308dp"
         android:text="m"
         android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.721"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText" />
@@ -207,8 +209,9 @@
     <EditText
         android:id="@+id/tLength"
         android:layout_width="103dp"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
         android:ems="10"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:hint="length in m"
         android:inputType="numberSigned|numberDecimal"
@@ -220,14 +223,14 @@
         app:layout_constraintHorizontal_bias="0.188"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:fontFamily="sans-serif-black"
-        app:layout_constraintVertical_bias="0.549" />
+        app:layout_constraintVertical_bias="0.539" />
 
     <EditText
         android:id="@+id/tWidth"
-        android:layout_width="115dp"
-        android:layout_height="43dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
         android:ems="10"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:hint="length in m"
         android:inputType="numberSigned|numberDecimal"
@@ -236,11 +239,10 @@
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintHorizontal_bias="0.778"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:fontFamily="sans-serif-black"
-        app:layout_constraintVertical_bias="0.55" />
+        app:layout_constraintVertical_bias="0.539" />
 
     <EditText
         android:id="@+id/units"
@@ -400,10 +402,10 @@
         android:layout_height="44dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.239"
+        app:layout_constraintHorizontal_bias="0.217"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.484"
+        app:layout_constraintVertical_bias="0.475"
         app:srcCompat="@drawable/length" />
 
     <ImageView
@@ -415,7 +417,7 @@
         app:layout_constraintHorizontal_bias="0.738"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.484"
+        app:layout_constraintVertical_bias="0.474"
         app:srcCompat="@drawable/width" />
 
     <ImageView
